@@ -1,38 +1,30 @@
-# create-svelte
+# nunogois-website
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
+Personal website: [www.nunogois.com](https://www.nunogois.com).
 
-## Creating a project
+Built with [Svelte](https://svelte.dev/) ([SvelteKit](https://kit.svelte.dev/)) and hosted in [CloudFlare Pages](https://pages.cloudflare.com/).
 
-If you're seeing this, you've probably already done this step. Congrats!
+Old website built with Nuxt in 2018: [nunogois-website-nuxt-2018](https://github.com/nunogois/nunogois-website-nuxt-2018).
 
-```bash
-# create a new project in the current directory
-npm init svelte@next
+## TODO
 
-# create a new project in my-app
-npm init svelte@next my-app
-```
+- [ ] Single index page with:
+  - [ ] Home
+  - [ ] About Me
+  - [ ] Skills (dynamically loaded from GitHub profile)
+  - [ ] Projects (dynamically loaded from GitHub, order by stars descending)
+  - [ ] Blog (dynamically loaded from Medium, order by date descending)
+  - [ ] CV (external link to cv.nunogois.com)
+  - [ ] Contact
+- [ ] Responsiveness check and optimizations
+- [ ] SEO optimizations
+- [ ] Publish to www.nunogois.com
+- [ ] Announce: Twitter, LinkedIn, Instagram
 
-> Note: the `@next` is temporary
+### BONUS
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
-
-```bash
-npm run build
-```
-
-> You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
+- [ ] Improve README.md
+- [ ] Publish to dev.nunogois.com while in development
+- [ ] Improve Lighthouse scores as much as possible
+- [ ] i18n with PT
+- [ ] Make repo public
