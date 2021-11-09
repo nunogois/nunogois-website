@@ -32,5 +32,6 @@ Old website built with Nuxt in 2018: [nunogois-website-nuxt-2018](https://github
 - [ ] Improve Lighthouse scores as much as possible
 - [ ] Add animations
 - [x] Add Lottie
+- [ ] Add latest tweets somewhere?
 - [ ] i18n with PT
 - [x] Make repo public
