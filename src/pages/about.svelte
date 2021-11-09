@@ -52,8 +52,8 @@
 	<p class="pt-5 text-justify">
 		What makes me unique is my creativity and adaptability. More than a developer, I like to think
 		of myself as an inventor and creator. I love challenges, thinking of solutions and coming up
-		with ideas. I'm generally at my best when I'm in a smaller-sized team, free to think and working
-		on a challenging project that I'm passionate about.
+		with ideas. I'm generally at my best when I'm in a smaller-sized team, free to learn and think,
+		and working on a challenging and fun project that I'm passionate about.
 	</p>
 </Section>
 

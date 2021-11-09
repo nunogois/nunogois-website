@@ -15,8 +15,8 @@ Old website built with Nuxt in 2018: [nunogois-website-nuxt-2018](https://github
   - [ ] Skills (dynamically loaded from GitHub profile)
   - [ ] Projects (dynamically loaded from GitHub, order by stars descending)
   - [ ] Blog (dynamically loaded from Medium, order by date descending)
-  - [ ] CV (external link to cv.nunogois.com)
-  - [ ] Contact
+  - [x] CV (external link to cv.nunogois.com)
+  - [x] Contact
 - [ ] Responsiveness check and optimizations
 - [ ] SEO optimizations
 - [ ] Publish to www.nunogois.com

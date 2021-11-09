@@ -59,6 +59,11 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
+"@iconify/svelte@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@iconify/svelte/-/svelte-2.0.0.tgz#5a40de1bd3b009c25eda02770d7d8cd60b0c7d72"
+  integrity sha512-zhuX8Rf0F8Xwv4xfZRt5s80hqFCSMtY9kZonqKpc9bPVNMDKBp6WFfu7VsJaSNI3mQAClY1Ff9zdRBxUVtt28Q==
+
 "@lottiefiles/svelte-lottie-player@^0.2.0":
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/@lottiefiles/svelte-lottie-player/-/svelte-lottie-player-0.2.0.tgz#e10f5f6eacdc9bbe9d0703e3206debf68d49adf9"
@@ -2174,11 +2179,6 @@ svelte-hmr@^0.14.7:
   version "0.14.7"
   resolved "https://registry.yarnpkg.com/svelte-hmr/-/svelte-hmr-0.14.7.tgz#7fa8261c7b225d9409f0a86f3b9ea5c3ca6f6607"
   integrity sha512-pDrzgcWSoMaK6AJkBWkmgIsecW0GChxYZSZieIYfCP0v2oPyx2CYU/zm7TBIcjLVUPP714WxmViE9Thht4etog==
-
-svelte-icons@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/svelte-icons/-/svelte-icons-2.1.0.tgz#6f2ec72f1d5c8b2de1a4b8a822c95bcb2f701aca"
-  integrity sha512-rHPQjweEc9fGSnvM0/4gA3pDHwyZyYsC5KhttCZRhSMJfLttJST5Uq0B16Czhw+HQ+HbSOk8kLigMlPs7gZtfg==
 
 svelte-preprocess@^4.0.0, svelte-preprocess@^4.9.8:
   version "4.9.8"
