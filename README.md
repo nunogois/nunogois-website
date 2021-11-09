@@ -8,9 +8,10 @@ Old website built with Nuxt in 2018: [nunogois-website-nuxt-2018](https://github
 
 ## TODO
 
-- [ ] Single index page with:
-  - [ ] Home
-  - [ ] About Me
+- [x] Add Tailwind CSS (https://github.com/svelte-add/tailwindcss)
+- [x] Single index page with:
+  - [x] Home
+  - [x] About
   - [ ] Skills (dynamically loaded from GitHub profile)
   - [ ] Projects (dynamically loaded from GitHub, order by stars descending)
   - [ ] Blog (dynamically loaded from Medium, order by date descending)
@@ -23,8 +24,11 @@ Old website built with Nuxt in 2018: [nunogois-website-nuxt-2018](https://github
 
 ### BONUS
 
+- [ ] Check: https://kit.svelte.dev/docs#additional-resources-integrations
 - [ ] Improve README.md
-- [ ] Publish to dev.nunogois.com while in development
+- [x] Publish to new.nunogois.com while in development
 - [ ] Improve Lighthouse scores as much as possible
+- [ ] Add animations
+- [x] Add Lottie
 - [ ] i18n with PT
 - [ ] Make repo public

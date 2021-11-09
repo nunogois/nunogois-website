@@ -1,0 +1,27 @@
+/* Write your global styles here, in PostCSS syntax */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	background-color: #1a1a1a;
+	color: white;
+	scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+	width: 7px;
+	height: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background: #5c5a5a;
+}
+
+section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
