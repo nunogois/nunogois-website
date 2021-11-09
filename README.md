@@ -1,6 +1,8 @@
 # nunogois-website
 
-Personal website: [www.nunogois.com](https://www.nunogois.com).
+~~Personal website: [www.nunogois.com](https://www.nunogois.com).~~
+
+Currently hosted in https://new.nunogois.com while in development.
 
 Built with [Svelte](https://svelte.dev/) ([SvelteKit](https://kit.svelte.dev/)) and hosted in [CloudFlare Pages](https://pages.cloudflare.com/).
 
@@ -31,4 +33,4 @@ Old website built with Nuxt in 2018: [nunogois-website-nuxt-2018](https://github
 - [ ] Add animations
 - [x] Add Lottie
 - [ ] i18n with PT
-- [ ] Make repo public
+- [x] Make repo public
