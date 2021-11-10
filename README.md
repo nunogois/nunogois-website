@@ -19,9 +19,11 @@ Old website built with Nuxt in 2018: [nunogois-website-nuxt-2018](https://github
   - [x] Blog (dynamically loaded from Medium, order by date descending)
   - [x] CV (external link to cv.nunogois.com)
   - [x] Contact
+- [ ] Properly handle some of the assets instead of linking to external URLs
 - [ ] Figure out the best way of triggering builds (daily cron from CloudFlare worker, maybe)
 - [ ] Responsiveness check and optimizations
 - [ ] SEO optimizations
+- [ ] Cleanup
 - [ ] Publish to www.nunogois.com
 - [ ] Announce: Twitter, LinkedIn, Instagram
 

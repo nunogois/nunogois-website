@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Section from '../components/section.svelte'
+	import avatarImg from '$assets/avatar.jpg'
 
 	const birthDate = new Date('1989-12-27')
 	const today = new Date()
@@ -31,7 +32,7 @@
 	<div class="p-10 lg:flex lg:p-0 rounded-xl overflow-hidden card">
 		<img
 			class="w-32 h-32 mx-auto rounded-full lg:mx-0 lg:rounded-none lg:w-52 lg:h-auto"
-			src="https://media-exp1.licdn.com/dms/image/C4E03AQEx8jzEnc6rlg/profile-displayphoto-shrink_800_800/0/1597077879197?e=1642032000&v=beta&t=KP9AgEFcMSduK7dOLnTMK9unYxzMT5iSu4WX7xaSQ_M"
+			src={avatarImg}
 			alt=""
 			width="384"
 			height="512"
@@ -56,9 +57,3 @@
 		and working on a challenging and fun project that I'm passionate about.
 	</p>
 </Section>
-
-<style>
-	.card {
-		border: 1px solid #333;
-	}
-</style>

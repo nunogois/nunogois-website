@@ -26,6 +26,16 @@ section {
 	text-align: center;
 }
 
+.card {
+	border: 1px solid #333;
+}
+
+.filter {
+	background-color: transparent;
+	border: none;
+	outline: none;
+}
+
 .medium-feed-snippet {
 	padding: 20px;
 	height: 100%;
