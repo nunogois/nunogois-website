@@ -39,7 +39,7 @@ const loadBlog = async () => {
 		let content = article.content
 		content =
 			content.substring(0, content.indexOf('Continue reading on Medium »') - 1) +
-			' target="__blank">Read More' +
+			'' +
 			content.split('Continue reading on Medium »')[1]
 		return {
 			guid: article.guid,
@@ -47,7 +47,7 @@ const loadBlog = async () => {
 			color: colors[article.guid] ?? randomColor(),
 			categories: article.categories,
 			link: article.link,
-			isoDate: article.isoDate.split('T')[0],
+			date: article.isoDate.split('T')[0],
 			content
 		}
 	})

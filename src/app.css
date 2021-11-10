@@ -25,3 +25,17 @@ section {
 	align-items: center;
 	text-align: center;
 }
+
+.medium-feed-snippet {
+	padding: 20px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	text-align: justify;
+}
+
+.medium-feed-item {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Section from '../components/section.svelte'
-	export let projects
+	// export let projects
 </script>
 
-<Section title="projects">TODO: Load projects here... Check back soon!</Section>
+<Section title="projects">TODO: Load projects here...</Section>
