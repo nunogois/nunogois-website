@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Section from '../components/section.svelte'
+	import Section from '$components/section.svelte'
 	export let blog
 	let filter = ''
 	$: filteredBlog = blog.filter(
@@ -12,7 +12,7 @@
 
 <Section title="blog">
 	<input bind:value={filter} class="filter w-full my-5" placeholder="Type here to filter..." />
-	<div class="grid md:grid-cols-3 gap-10">
+	<div class="grid sm:grid-cols-2 md:grid-cols-3 gap-10">
 		{#each filteredBlog as { guid, title, color, date, content }}
 			<div class="card rounded-xl flex flex-col">
 				<a href={guid} target="_blank" class="flex flex-col h-full">

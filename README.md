@@ -4,7 +4,8 @@
 
 Currently hosted in https://new.nunogois.com while in development.
 
-Built with [Svelte](https://svelte.dev/) ([SvelteKit](https://kit.svelte.dev/)) and hosted in [CloudFlare Pages](https://pages.cloudflare.com/).
+Built with [Svelte](https://svelte.dev/) ([SvelteKit](https://kit.svelte.dev/)) and [Tailwind CSS](https://tailwindcss.com/).
+Hosted in [CloudFlare Pages](https://pages.cloudflare.com/).
 
 Old website built with Nuxt in 2018: [nunogois-website-nuxt-2018](https://github.com/nunogois/nunogois-website-nuxt-2018).
 
@@ -15,27 +16,30 @@ Old website built with Nuxt in 2018: [nunogois-website-nuxt-2018](https://github
   - [x] Home
   - [x] About
   - [x] Skills (dynamically loaded from GitHub profile)
-  - [ ] Projects (dynamically loaded from GitHub, order by stars descending)
+  - [x] Projects (dynamically loaded from GitHub, popular and latest)
   - [x] Blog (dynamically loaded from Medium, order by date descending)
   - [x] CV (external link to cv.nunogois.com)
   - [x] Contact
-- [ ] Properly handle some of the assets instead of linking to external URLs
-- [ ] Figure out the best way of triggering builds (daily cron from CloudFlare worker, maybe)
+- [x] Properly handle some of the assets instead of linking to external URLs
 - [ ] Responsiveness check and optimizations
 - [ ] SEO optimizations
 - [ ] Cleanup
+- [ ] Figure out the best way of triggering builds (daily cron from CloudFlare worker, maybe)
 - [ ] Publish to www.nunogois.com
 - [ ] Announce: Twitter, LinkedIn, Instagram
 
 ### BONUS
 
-- [ ] Check: https://kit.svelte.dev/docs#additional-resources-integrations
-- [ ] Improve README.md
 - [x] Publish to new.nunogois.com while in development
-- [ ] Improve Lighthouse scores as much as possible
-- [ ] Add animations
 - [x] Add Lottie
-- [ ] Add latest tweets somewhere?
-- [ ] i18n with PT
 - [x] Make repo public
+- [ ] Improve Lighthouse scores as much as possible
+- [ ] Add contact form
 - [ ] Add recruit page
+- [ ] Improve README.md
+
+### MAYBE?
+
+- [ ] i18n with PT
+- [ ] Add animations
+- [ ] Add latest tweets somewhere

@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Section from '../components/section.svelte'
-	import Lottie from '../components/lottie.svelte'
+	import Section from '$components/section.svelte'
+	import Lottie from '$components/lottie.svelte'
 	import Icon from '@iconify/svelte'
 </script>
 
@@ -17,9 +17,7 @@
 		>
 	</div>
 	<div class="max-w-md mx-auto pb-2">
-		<Lottie
-			src="https://raw.githubusercontent.com/nunogois/bestdit/master/public/lottie/ng_dev.json"
-		/>
+		<Lottie src="/ng_dev.json" />
 	</div>
 	Thank you for checking out my website!
 	<h2>© {new Date().getFullYear()} - Nuno Góis</h2>

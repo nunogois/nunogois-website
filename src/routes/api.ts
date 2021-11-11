@@ -35,7 +35,7 @@ const loadProjects = async () => {
 
 	return {
 		popular: data.sort((a, b) => b.stargazers_count - a.stargazers_count).slice(0, 6),
-		latest: data
+		recent: data
 			.filter((p) => !p.fork && !ignoreRepos.includes(p.name) && !p.name.includes('-old'))
 			.sort((a, b) => +new Date(b.pushed_at) - +new Date(a.pushed_at))
 			.slice(0, 6)

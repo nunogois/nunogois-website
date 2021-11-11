@@ -35,7 +35,7 @@
 	</p>
 	<div class="p-10 lg:flex lg:p-0 rounded-xl overflow-hidden card">
 		<img
-			class="w-32 h-32 mx-auto rounded-full lg:mx-0 lg:rounded-none lg:w-52 lg:h-auto"
+			class="w-32 h-32 mx-auto rounded-full lg:mx-0 lg:rounded-none lg:w-52 lg:h-auto object-cover"
 			src={skillsImg}
 			alt="skills"
 		/>

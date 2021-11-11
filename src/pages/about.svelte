@@ -1,16 +1,13 @@
 <script lang="ts">
-	import Section from '../components/section.svelte'
+	import Section from '$components/section.svelte'
 	import aboutImg from '$assets/about.jpg'
+	import carbonImg from '$assets/carbon.png'
 	import { years, DATE } from './utils'
 </script>
 
 <Section title="about">
 	<div>
-		<img
-			src="https://raw.githubusercontent.com/nunogois/nunogois/main/resources/thumbnail_carbon.png"
-			alt="About me"
-			class="mx-auto hidden md:block"
-		/>
+		<img src={carbonImg} alt="About me" class="mx-auto hidden md:block" />
 	</div>
 	<p class="py-5 text-justify">
 		<span class="font-bold">Hello World!</span><br />I am an experienced and driven {years(
@@ -24,7 +21,7 @@
 	</p>
 	<div class="p-10 lg:flex lg:p-0 rounded-xl overflow-hidden card">
 		<img
-			class="w-32 h-32 mx-auto rounded-full lg:mx-0 lg:rounded-none lg:w-52 lg:h-auto"
+			class="w-32 h-32 mx-auto rounded-full lg:mx-0 lg:rounded-none lg:w-52 lg:h-auto object-cover"
 			src={aboutImg}
 			alt="about"
 		/>
@@ -35,15 +32,17 @@
 			<p class="text-justify pt-5">
 				I love coding, it's super fun and gratifying. As an INTJ, I am focused, rational, introvert
 				and a bit of a loner. I'm a better listener than talker. I am a college dropout and
-				self-taught. I have Crohn's so I have a limited diet and don't drink or smoke. I love
-				videogames, music, movies, TV series, reading, writing, running, hiking...
+				self-taught. I have Crohn's so I have a limited diet and don't drink or smoke. I try my best
+				to stay healthy.<br />I love videogames, music, movies, TV series, reading, writing,
+				running, hiking and many other things.<br />
+				Feel free to ask me anything!
 			</p>
 		</div>
 	</div>
 	<p class="pt-5 text-justify">
 		What makes me unique is my creativity and adaptability. More than a developer, I like to think
-		of myself as an inventor and creator. I love challenges, thinking of solutions and coming up
-		with ideas. I'm generally at my best when I'm in a smaller-sized team, free to learn and think,
-		and working on a challenging and fun project that I'm passionate about.
+		of myself as an inventor and creator. I love tackling unique challenges, thinking of solutions
+		and coming up with ideas. I'm generally at my best when I'm in a smaller-sized team, free to
+		learn and think, and working on a challenging and fun project that I'm passionate about.
 	</p>
 </Section>
