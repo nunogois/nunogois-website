@@ -38,3 +38,4 @@ Old website built with Nuxt in 2018: [nunogois-website-nuxt-2018](https://github
 - [ ] Add latest tweets somewhere?
 - [ ] i18n with PT
 - [x] Make repo public
+- [ ] Add recruit page

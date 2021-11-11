@@ -1,16 +1,7 @@
 <script lang="ts">
 	import Section from '../components/section.svelte'
-	import avatarImg from '$assets/avatar.jpg'
-
-	const birthDate = new Date('1989-12-27')
-	const today = new Date()
-	let age = new Date().getFullYear() - birthDate.getFullYear()
-	if (
-		today.getMonth() < birthDate.getMonth() ||
-		(today.getMonth() == birthDate.getMonth() && today.getDate() < birthDate.getDate())
-	) {
-		age--
-	}
+	import aboutImg from '$assets/about.jpg'
+	import { years, DATE } from './utils'
 </script>
 
 <Section title="about">
@@ -22,31 +13,30 @@
 		/>
 	</div>
 	<p class="py-5 text-justify">
-		<span class="font-bold">Hello World!</span><br />I am an experienced and driven {age} years old Full-Stack
-		Developer from Portugal. Passionate for the job, love putting skills to the test, facing challenges
-		in a creative and perfectionist way. Experienced with every step of developing and delivering cross-platform,
-		modern and responsive software. Worked with several different technologies across the stack, always
-		willing to learn more and improve skills. Biggest strenghts lie in bringing a focused, creative and
-		out-of-the-box approach to challenges, leveraging hard-working and quick learning traits.
+		<span class="font-bold">Hello World!</span><br />I am an experienced and driven {years(
+			DATE.BIRTHDAY
+		)} years old Full-Stack Developer from Portugal. Passionate for the job, love putting skills to the
+		test, facing challenges in a creative and perfectionist way. Experienced with every step of developing
+		and delivering cross-platform, modern and responsive software. Worked with several different technologies
+		across the stack, always willing to learn more and improve skills. Biggest strenghts lie in bringing
+		a focused, creative and out-of-the-box approach to challenges, leveraging hard-working and quick
+		learning traits.
 	</p>
 	<div class="p-10 lg:flex lg:p-0 rounded-xl overflow-hidden card">
 		<img
 			class="w-32 h-32 mx-auto rounded-full lg:mx-0 lg:rounded-none lg:w-52 lg:h-auto"
-			src={avatarImg}
-			alt=""
-			width="384"
-			height="512"
+			src={aboutImg}
+			alt="about"
 		/>
-		<div class="flex pt-6 lg:p-8 items-center">
-			<p class="text-justify">
-				<span class="font-bold"
-					>My goal in life is to be the best version of myself that I can, trying to improve every
-					day.</span
-				><br />
-				I love coding, it's super fun and gratifying. As an INTJ, I am focused, rational, introvert and
-				a bit of a loner. I'm a better listener than talker. I am a college dropout and self-taught.
-				I have Crohn's so I have a limited diet and don't drink or smoke. I love videogames, music, movies,
-				TV series, reading, writing, running, hiking...
+		<div class="pt-6 lg:p-8 items-center">
+			<p class="text-justify font-bold">
+				My goal in life is to be the best version of myself that I can, trying to improve every day.
+			</p>
+			<p class="text-justify pt-5">
+				I love coding, it's super fun and gratifying. As an INTJ, I am focused, rational, introvert
+				and a bit of a loner. I'm a better listener than talker. I am a college dropout and
+				self-taught. I have Crohn's so I have a limited diet and don't drink or smoke. I love
+				videogames, music, movies, TV series, reading, writing, running, hiking...
 			</p>
 		</div>
 	</div>

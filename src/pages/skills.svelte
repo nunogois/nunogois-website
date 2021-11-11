@@ -37,9 +37,7 @@
 		<img
 			class="w-32 h-32 mx-auto rounded-full lg:mx-0 lg:rounded-none lg:w-52 lg:h-auto"
 			src={skillsImg}
-			alt=""
-			width="384"
-			height="512"
+			alt="skills"
 		/>
 		<div class="flex pt-6 lg:p-8 items-center">
 			<p class="text-justify">

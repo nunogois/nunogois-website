@@ -29,7 +29,17 @@ const loadSkills = async () => {
 }
 
 const loadProjects = async () => {
-	return []
+	const data = await fetch('https://api.github.com/users/nunogois/repos').then((res) => res.json())
+
+	const ignoreRepos = ['nunogois', 'nunogois-cv']
+
+	return {
+		popular: data.sort((a, b) => b.stargazers_count - a.stargazers_count).slice(0, 6),
+		latest: data
+			.filter((p) => !p.fork && !ignoreRepos.includes(p.name) && !p.name.includes('-old'))
+			.sort((a, b) => +new Date(b.pushed_at) - +new Date(a.pushed_at))
+			.slice(0, 6)
+	}
 }
 
 const loadBlog = async () => {
