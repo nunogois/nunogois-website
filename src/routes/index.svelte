@@ -48,7 +48,7 @@
 	<meta
 		property="og:image"
 		prefix="og: http://ogp.me/ns#"
-		content={website.url + 'thumbnail.png'}
+		content={website.url + '/thumbnail.png'}
 	/>
 	<meta property="og:url" prefix="og: http://ogp.me/ns#" content={website.url} />
 	<meta name="twitter:card" content="summary_large_image" />
