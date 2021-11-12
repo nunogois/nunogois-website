@@ -15,7 +15,7 @@
 	import About from '$pages/about.svelte'
 	import Skills from '$pages/skills.svelte'
 	import Projects from '$pages/projects.svelte'
-	// import Blog from '$pages/blog.svelte'
+	import Blog from '$pages/blog.svelte'
 	import Contact from '$pages/contact.svelte'
 
 	export let skills, projects, blog
@@ -64,5 +64,5 @@
 <About />
 <Skills {skills} />
 <Projects {projects} {skills} />
-<!-- <Blog {blog} /> -->
+<Blog {blog} />
 <Contact />

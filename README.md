@@ -1,13 +1,17 @@
 # nunogois-website
 
-~~Personal website: [www.nunogois.com](https://www.nunogois.com).~~
+![Nuno Góis](https://github.com/nunogois/nunogois/blob/main/static/thumbnail.png?raw=true)
 
-Currently hosted in https://new.nunogois.com while in development.
+Personal website: [www.nunogois.com](https://www.nunogois.com).
 
 Built with [Svelte](https://svelte.dev/) ([SvelteKit](https://kit.svelte.dev/)) and [Tailwind CSS](https://tailwindcss.com/).
 Hosted in [CloudFlare Pages](https://pages.cloudflare.com/).
 
 Old website built with Nuxt in 2018: [nunogois-website-nuxt-2018](https://github.com/nunogois/nunogois-website-nuxt-2018).
+
+## Lighthouse scores 2021-11-12 (Blog disabled)
+
+![Lighthouse](https://github.com/nunogois/nunogois/blob/main/lighthouse.png?raw=true)
 
 ## TODO
 
@@ -24,7 +28,7 @@ Old website built with Nuxt in 2018: [nunogois-website-nuxt-2018](https://github
 - [x] Responsiveness check and optimizations
 - [x] Cleanup
 - [x] SEO optimizations
-- [ ] Publish to www.nunogois.com
+- [x] Publish to www.nunogois.com
 - [ ] Announce: Twitter, LinkedIn, Instagram
 - [ ] Figure out the best way of triggering builds (daily cron from CloudFlare worker, maybe)
 
