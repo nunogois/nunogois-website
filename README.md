@@ -37,6 +37,7 @@ Old website built with Nuxt in 2018: [nunogois-website-nuxt-2018](https://github
 - [x] Publish to new.nunogois.com while in development
 - [x] Add Lottie
 - [x] Make repo public
+- [ ] Medium blog is ruining Lighthouse scores - fix it
 - [ ] Improve Lighthouse scores as much as possible
 - [ ] Add contact form
 - [ ] Add recruit page

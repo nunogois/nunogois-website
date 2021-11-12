@@ -54,7 +54,7 @@
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content={website.title} />
 	<meta name="twitter:description" content={website.description} />
-	<meta name="twitter:image" content={website.url + 'thumbnail.png'} />
+	<meta name="twitter:image" content={website.url + '/thumbnail.png'} />
 	<meta name="twitter:url" content={website.url} />
 	<meta name="twitter:site" content={website.twitter} />
 	<meta name="twitter:creator" content={website.twitter} />
