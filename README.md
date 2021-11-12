@@ -1,6 +1,6 @@
 # nunogois-website
 
-![Nuno Góis](https://github.com/nunogois/nunogois/blob/main/static/thumbnail.png?raw=true)
+![Nuno Góis](https://github.com/nunogois/nunogois-website/blob/main/static/thumbnail.png?raw=true)
 
 Personal website: [www.nunogois.com](https://www.nunogois.com).
 
@@ -11,7 +11,7 @@ Old website built with Nuxt in 2018: [nunogois-website-nuxt-2018](https://github
 
 ## Lighthouse scores 2021-11-12 (Blog disabled)
 
-![Lighthouse](https://github.com/nunogois/nunogois/blob/main/lighthouse.png?raw=true)
+![Lighthouse](https://github.com/nunogois/nunogois-website/blob/main/lighthouse.png?raw=true)
 
 ## TODO
 
