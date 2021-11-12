@@ -7,7 +7,9 @@
 	}
 </script>
 
-<div class="grid grid-flow-col text-xs md:text-base fixed w-full justify-center p-2 gap-3 md:gap-7">
+<div
+	class="grid grid-flow-col text-xs md:text-base fixed w-full justify-center p-2 gap-3 md:gap-7 bg-background"
+>
 	<a href={'javascript:;'} on:click={() => scrollTo('home')} class="hidden md:block">HOME</a>
 	<a href={'javascript:;'} on:click={() => scrollTo('about')}>ABOUT</a>
 	<a href={'javascript:;'} on:click={() => scrollTo('skills')}>SKILLS</a>
@@ -16,9 +18,3 @@
 	<a href="https://cv.nunogois.com" target="_blank">CV</a>
 	<a href={'javascript:;'} on:click={() => scrollTo('contact')}>CONTACT</a>
 </div>
-
-<style>
-	.grid {
-		background-color: #1a1a1a;
-	}
-</style>

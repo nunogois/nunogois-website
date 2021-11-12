@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Section from '$components/section.svelte'
 	import Lottie from '$components/lottie.svelte'
+
 	import Icon from '@iconify/svelte'
 </script>
 
@@ -10,10 +11,10 @@
 			><Icon icon="fa-brands:github-alt" width="100%" /></a
 		>
 		<a href="https://twitter.com/nunogois_dev" target="_blank" class="w-12 md:w-32"
-			><Icon icon="fa-brands:twitter" width="100%" color="rgb(56, 161, 243)" /></a
+			><Icon icon="fa-brands:twitter" width="100%" color="#38a1f3" /></a
 		>
 		<a href="https://www.linkedin.com/in/nuno-gois" target="_blank" class="w-12 md:w-32"
-			><Icon icon="fa-brands:linkedin" width="100%" color="rgb(0, 119, 181)" /></a
+			><Icon icon="fa-brands:linkedin" width="100%" color="#0077b5" /></a
 		>
 	</div>
 	<div class="max-w-md mx-auto pb-2">

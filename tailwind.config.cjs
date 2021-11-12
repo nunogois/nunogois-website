@@ -3,10 +3,15 @@ const config = {
 	purge: ['./src/**/*.{html,js,svelte,ts}'],
 
 	theme: {
-		extend: {}
+		extend: {
+			colors: {
+				background: '#1a1a1a',
+				'light-gray': '#333'
+			}
+		}
 	},
 
 	plugins: []
-};
+}
 
-module.exports = config;
+module.exports = config

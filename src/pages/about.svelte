@@ -15,11 +15,11 @@
 		)} years old Full-Stack Developer from Portugal. Passionate for the job, love putting skills to the
 		test, facing challenges in a creative and perfectionist way. Experienced with every step of developing
 		and delivering cross-platform, modern and responsive software. Worked with several different technologies
-		across the stack, always willing to learn more and improve skills. Biggest strenghts lie in bringing
+		across the stack, always willing to learn more and improve skills. Biggest strengths lie in bringing
 		a focused, creative and out-of-the-box approach to challenges, leveraging hard-working and quick
 		learning traits.
 	</p>
-	<div class="p-10 lg:flex lg:p-0 rounded-xl overflow-hidden card">
+	<div class="border border-light-gray p-10 lg:flex lg:p-0 rounded-xl overflow-hidden">
 		<img
 			class="w-32 h-32 mx-auto rounded-full lg:mx-0 lg:rounded-none lg:w-52 lg:h-auto object-cover"
 			src={aboutImg}
