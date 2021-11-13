@@ -100,6 +100,8 @@ If you're curious about the previous website, you can check the repo here: [nuno
 - [x] Add Lottie
 - [x] Make repo public
 - [x] Improve README.md
+- [x] Further SEO optimizations - Headers are apparently a big thing in SEO
+- [ ] Even more SEO optimizations - Convert my name component into a header
 - [ ] Add contact form
 - [ ] Add recruit page
 - [ ] Medium blog is ruining Lighthouse scores - fix it

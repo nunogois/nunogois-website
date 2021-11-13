@@ -10,14 +10,13 @@
 		<img src={carbonImg} alt="About me" class="mx-auto hidden md:block" />
 	</div>
 	<p class="py-5 text-justify">
-		<span class="font-bold">Hello World!</span><br />I am an experienced and driven {years(
-			DATE.BIRTHDAY
-		)} years old Full-Stack Developer from Portugal. Passionate for the job, love putting skills to the
-		test, facing challenges in a creative and perfectionist way. Experienced with every step of developing
-		and delivering cross-platform, modern and responsive software. Worked with several different technologies
-		across the stack, always willing to learn more and improve skills. Biggest strengths lie in bringing
-		a focused, creative and out-of-the-box approach to challenges, leveraging hard-working and quick
-		learning traits.
+		<span class="font-bold">Hello World!</span><br />My name is Nuno Góis. I am an experienced and
+		driven {years(DATE.BIRTHDAY)} years old Full-Stack Developer from Portugal. Passionate for the job,
+		love putting skills to the test, facing challenges in a creative and perfectionist way. Experienced
+		with every step of developing and delivering cross-platform, modern and responsive software. Worked
+		with several different technologies across the stack, always willing to learn more and improve skills.
+		Biggest strengths lie in bringing a focused, creative and out-of-the-box approach to challenges,
+		leveraging hard-working and quick learning traits.
 	</p>
 	<div class="border border-light-gray p-10 lg:flex lg:p-0 rounded-xl overflow-hidden">
 		<img
@@ -33,7 +32,7 @@
 				I love coding, it's super fun and gratifying. As an INTJ, I am focused, rational, introvert
 				and a bit of a loner. I'm a better listener than talker. I am a college dropout and
 				self-taught. I have Crohn's so I have a limited diet and don't drink or smoke. I try my best
-				to stay healthy.<br />I love videogames, music, movies, TV series, reading, writing,
+				to stay healthy.<br />I love videogames, tech, music, movies, TV series, reading, writing,
 				running, hiking and many other things.<br />
 				Feel free to ask me anything!
 			</p>

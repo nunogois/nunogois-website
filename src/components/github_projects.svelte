@@ -8,11 +8,11 @@
 	{#each projects as { html_url, name, language, pushed_at, description, stargazers_count, forks }}
 		<div class="border border-light-gray rounded-xl flex flex-col overflow-hidden">
 			<a href={html_url} target="_blank" class="flex flex-col h-full">
-				<h1
+				<h5
 					class="flex justify-center items-center text-lg font-medium mb-2 p-2 border-b border-light-gray"
 				>
 					{name}
-				</h1>
+				</h5>
 				<div class="flex justify-between mx-5 mb-2 text-gray-300">
 					<div class="flex items-center">
 						<img
@@ -21,9 +21,9 @@
 							class="inline-block mr-1 object-cover skill"
 							title={language}
 						/>
-						<h2 class="text-xs">
+						<h6 class="text-xs">
 							{language}
-						</h2>
+						</h6>
 					</div>
 					<span class="text-xs">{pushed_at.split('T')[0]}</span>
 				</div>

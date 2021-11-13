@@ -24,7 +24,7 @@
 		lang: 'en',
 		title: 'Nuno Góis - Full-Stack Developer',
 		description:
-			'Nuno Góis - Full-Stack Developer from Portugal. Experienced in .NET, TypeScript, Vue, Go, Python, SQL and many other technologies of the development tech stack.',
+			'Full-Stack Developer from Portugal. Experienced with every step of developing and delivering software projects using .NET C#, JavaScript, Go, Python, and more.',
 		url: 'https://www.nunogois.com',
 		twitter: '@nunogois_dev'
 	}

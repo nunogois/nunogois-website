@@ -77,7 +77,7 @@
 	</div>
 	<div class="flex mt-5">
 		<Icon icon="fa:briefcase" width="30px" class="inline-block" />
-		<h2 class="text-left text-xl ml-2">Work Experience</h2>
+		<h3 class="text-left text-xl ml-2">Work Experience</h3>
 	</div>
 	{#each experience as { name, image, role, date, description }}
 		<div class="border border-light-gray p-10 lg:flex lg:p-0 rounded-xl overflow-hidden mt-5">
@@ -94,7 +94,7 @@
 	{/each}
 	<div class="flex mt-5">
 		<Icon icon="fa-brands:github-alt" width="30px" class="inline-block" />
-		<h2 class="text-left text-xl ml-2">GitHub Projects</h2>
+		<h3 class="text-left text-xl ml-2">GitHub Projects</h3>
 	</div>
 	<input
 		bind:value={filter}
@@ -104,20 +104,20 @@
 	{#if popular.length}
 		<div class="flex mb-5 place-content-center">
 			<Icon icon="fa:star" width="26px" class="inline-block" />
-			<h2 class="text-lg ml-2">Popular</h2>
+			<h4 class="text-lg ml-2">Popular</h4>
 		</div>
 		<GitHubProjects projects={popular} {skills} />
 	{/if}
 	{#if recent.length}
 		<div class="flex mt-10 mb-5 place-content-center">
 			<Icon icon="emojione-monotone:new-button" width="26px" class="inline-block" />
-			<h2 class="text-lg ml-2">Recent Updates</h2>
+			<h4 class="text-lg ml-2">Recent Updates</h4>
 		</div>
 		<GitHubProjects projects={recent} {skills} />
 	{/if}
 	{#if !popular.length && !recent.length}
 		<div class="flex justify-center items-center w-full">
-			<h1 class="text-lg font-medium">No results found.</h1>
+			<span class="text-lg font-medium">No results found.</span>
 		</div>
 	{/if}
 </Section>

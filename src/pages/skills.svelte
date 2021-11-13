@@ -43,14 +43,16 @@
 	</div>
 	{#if !filteredSkills.length}
 		<div class="flex justify-center items-center w-full">
-			<h1 class="text-lg font-medium">No results found.</h1>
+			<span class="text-lg font-medium">No results found.</span>
 		</div>
 	{:else}
 		<p class="text-justify mt-5">{filteredSkills.map((s) => s.name).join(', ') + '.'}</p>
 	{/if}
 	<p class="text-justify my-5">
-		Besides this simplistic overview of my experience across the tech stack, these are my current
-		preferences:
+		As a Full-Stack Developer, I don't have a clear preference between front-end and back-end. I am
+		experienced with every step of the stack and constantly adapting and adding to my knowledge.
+		Besides this simplistic overview of my experience across the tech stack, these are some of my
+		current preferences:
 	</p>
 	<div class="border border-light-gray p-10 lg:flex lg:p-0 rounded-xl overflow-hidden">
 		<img
@@ -73,9 +75,9 @@
 		</div>
 	</div>
 	<p class="text-justify mt-5">
-		Despite my current preferences, I'm constantly looking for new things to learn and experiment
-		with. One of the best parts of the tech landscape is that it's changing all the time, so it
-		never gets boring.
+		Despite this, you'll find me constantly looking for new things to learn and experiment with. One
+		of the best parts of the tech landscape is that it's changing all the time, so it never gets
+		boring.
 	</p>
 </Section>
 
