@@ -21,12 +21,12 @@
 		{#each filteredBlog as { guid, title, color, date, content }}
 			<div class="border border-light-gray rounded-xl flex flex-col">
 				<a href={guid} target="_blank" class="flex flex-col h-full">
-					<h5
+					<h4
 						class="flex justify-center items-center text-sm lg:text-lg font-medium p-5"
 						style="color:{color}"
 					>
 						{title}
-					</h5>
+					</h4>
 					<span class="mb-2 text-xs text-gray-300 ">{date}</span>
 					<div class="h-full text-xs lg:text-base">
 						{@html content}
@@ -43,7 +43,7 @@
 </Section>
 
 <style>
-	h5 {
+	h4 {
 		min-height: 80px;
 		max-height: 80px;
 	}
