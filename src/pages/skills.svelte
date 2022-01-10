@@ -50,9 +50,11 @@
 	{/if}
 	<p class="text-justify my-5">
 		As a Full-Stack Developer, I don't have a clear preference between front-end and back-end. I am
-		experienced with every step of the stack and constantly adapting and adding to my knowledge.
-		Besides this simplistic overview of my experience across the tech stack, these are some of my
-		current preferences:
+		experienced with every step of the stack and constantly adapting and adding to my knowledge. I
+		reached a point professionally where it's generally easy for me to join a new project and learn
+		the stack being used in a short amount of time, due to my experience, so I think only looking at
+		the tools that I use can prove somewhat limiting. Besides this simplistic overview of my
+		experience across the tech stack, these are some of my current preferences:
 	</p>
 	<div class="border border-light-gray p-10 lg:flex lg:p-0 rounded-xl overflow-hidden">
 		<img
