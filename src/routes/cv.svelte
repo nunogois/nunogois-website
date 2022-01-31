@@ -38,7 +38,7 @@
 					<h1 class="text-xl">Nuno Góis</h1>
 					<h2 class="text-sm">Full-Stack Developer</h2>
 				</div>
-				<div class="flex flex-col gap-1 justify-center">
+				<div class="flex flex-col gap-1 justify-center items-end">
 					<a href="https://www.nunogois.com" target="_blank" class="text-xs"
 						><Icon icon="fa-solid:globe" class="inline-block" /> www.nunogois.com</a
 					>
