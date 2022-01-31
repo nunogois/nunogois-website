@@ -15,6 +15,6 @@
 	<a href={'javascript:;'} on:click={() => scrollTo('skills')}>SKILLS</a>
 	<a href={'javascript:;'} on:click={() => scrollTo('projects')}>PROJECTS</a>
 	<a href={'javascript:;'} on:click={() => scrollTo('blog')}>BLOG</a>
-	<a href="https://cv.nunogois.com" target="_blank">CV</a>
+	<a href={'javascript:;'} on:click={() => scrollTo('cv')}>CV</a>
 	<a href={'javascript:;'} on:click={() => scrollTo('contact')}>CONTACT</a>
 </div>

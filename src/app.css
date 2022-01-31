@@ -19,6 +19,10 @@ body {
 	background: #5c5a5a;
 }
 
+p a {
+	color: #93ceff;
+}
+
 .medium-feed-snippet {
 	padding: 20px;
 	height: 100%;

@@ -2,7 +2,7 @@
 	import Section from '$components/section.svelte'
 	import aboutImg from '$assets/about.jpg'
 	import carbonImg from '$assets/carbon.png'
-	import { years, DATE } from './utils'
+	import { years, DATE } from '$data/dates'
 </script>
 
 <Section title="about">
