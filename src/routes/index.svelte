@@ -2,19 +2,18 @@
 	import Navbar from '$components/navbar.svelte'
 
 	export async function load({ page, fetch }) {
-		console.log('page', page)
-		// if (page.host === 'cv.nunogois.com') {
-		// 	return {
-		// 		url: '/cv',
-		// 		status: 301
-		// 	}
-		// }
-
-		const res = await fetch('/api')
-
-		if (res.ok) {
+		if (page.host === 'cv.nunogois.com') {
 			return {
-				props: await res.json()
+				redirect: '/cv',
+				status: 301
+			}
+		} else {
+			const res = await fetch('/api')
+
+			if (res.ok) {
+				return {
+					props: await res.json()
+				}
 			}
 		}
 	}
