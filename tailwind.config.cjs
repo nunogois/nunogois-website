@@ -1,7 +1,5 @@
-const config = {
-	mode: 'jit',
-	purge: ['./src/**/*.{html,js,svelte,ts}'],
-
+module.exports = {
+	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
 		extend: {
 			colors: {
@@ -10,8 +8,5 @@ const config = {
 			}
 		}
 	},
-
 	plugins: []
 }
-
-module.exports = config
