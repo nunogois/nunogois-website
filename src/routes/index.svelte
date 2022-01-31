@@ -4,7 +4,7 @@
 	export async function load({ page, fetch }) {
 		if (page.host === 'cv.nunogois.com') {
 			return {
-				redirect: '/cv',
+				redirect: 'https://www.nunogois.com/cv',
 				status: 301
 			}
 		} else {
