@@ -15,15 +15,17 @@
 				</h5>
 				<div class="flex justify-between mx-5 mb-2 text-gray-300">
 					<div class="flex items-center">
-						<img
-							src={skills.find((s) => s.name === language).image}
-							alt={language}
-							class="inline-block mr-1 object-cover skill"
-							title={language}
-						/>
-						<h6 class="text-xs">
-							{language}
-						</h6>
+						{#if skills.find((s) => s.name === language)}
+							<img
+								src={skills.find((s) => s.name === language).image}
+								alt={language}
+								class="inline-block mr-1 object-cover skill"
+								title={language}
+							/>
+							<h6 class="text-xs">
+								{language}
+							</h6>
+						{/if}
 					</div>
 					<span class="text-xs">{pushed_at.split('T')[0]}</span>
 				</div>
