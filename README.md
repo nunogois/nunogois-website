@@ -104,7 +104,7 @@ If you're curious about the previous website, you can check the repo here: [nuno
 - [x] Even more SEO optimizations - Convert my name component into a simpler h1
 - [ ] Add contact form
 - [ ] Add recruit page
-- [ ] Medium blog is ruining Lighthouse scores - fix it
+- [x] Medium blog is ruining Lighthouse scores - fix it (maybe migrate to dev.to in the near future)
 - [ ] Improve Lighthouse scores as much as possible
 
 ### MAYBE?
