@@ -84,11 +84,13 @@
 				<p class="text-left font-bold text-sm">{name}</p>
 				<p class="text-left font-bold text-xs">{role}</p>
 				<p class="text-left text-xs text-gray-300 print:text-black">{date}</p>
-				<ul class="text-justify pt-3 list-disc">
-					{#each description.split('\n') as desc}
-						<li class="text-justify text-xs">{desc}</li>
-					{/each}
-				</ul>
+				{#if description}
+					<ul class="text-justify pt-3 list-disc">
+						{#each description.split('\n') as desc}
+							<li class="text-justify text-xs">{desc}</li>
+						{/each}
+					</ul>
+				{/if}
 			</div>
 		</div>
 	{/each}

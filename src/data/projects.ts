@@ -1,12 +1,22 @@
+import unleashImg from '$assets/ext/unleash.png'
 import zoiImg from '$assets/ext/zoi.jpg'
 import iqaImg from '$assets/ext/iqa.jpg'
 
 export const experience = [
 	{
+		name: 'Unleash',
+		image: unleashImg,
+		url: 'https://www.getunleash.io/',
+		role: 'Full-Stack Developer',
+		date: '04/2022 - Current',
+		description: ''
+	},
+	{
 		name: 'Zoi',
 		image: zoiImg,
+		url: 'https://en.zoi.tech/',
 		role: 'Full-Stack Developer (Specialist)',
-		date: '06/2021 - Current',
+		date: '06/2021 - 03/2022',
 		description: `Assigned to Digital Innovations, worked close to partners as a developer in exploratory projects using innovative cloud solutions.
 Developed a chatbot based on Google Cloud/Firebase, UI built with Quasar Framework (Vue.js) and a Google Cloud Function that acted as a bridge between the UI, Dialogflow CX (conversation flow, NLP), Contentful;
 Contributed to a React Native app project by developing features and fixes for the app, used by hundreds of thousands of end-users.
@@ -18,6 +28,7 @@ Shared knowledge and learned with teammates through pair programming.`
 	{
 		name: 'IQA - Sistemas de Gestão, Lda',
 		image: iqaImg,
+		url: 'https://www.myagir.com/en/',
 		role: 'Full-Stack Developer (Lead, Architect)',
 		date: '03/2011 - 05/2021',
 		description: `Developed AGIR ®, a Quality Management Software (QMS), Process Management (BPM) and Document control software. Worked on the platform since 2011: From ASP.NET, SQL Server, Web API, .NET WinForms or Java to Windows Services and Office Add-Ins, (...).

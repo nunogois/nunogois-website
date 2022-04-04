@@ -107,11 +107,13 @@
 				<p class="text-left font-bold">{name}</p>
 				<p class="text-left font-bold">{role}</p>
 				<p class="text-left text-xs text-gray-300">{date}</p>
-				<ul class="text-justify pt-5 list-disc">
-					{#each description.split('\n') as desc}
-						<li class="text-left text-sm">{desc}</li>
-					{/each}
-				</ul>
+				{#if description}
+					<ul class="text-justify pt-5 list-disc">
+						{#each description.split('\n') as desc}
+							<li class="text-left text-sm">{desc}</li>
+						{/each}
+					</ul>
+				{/if}
 			</div>
 		</div>
 	{/each}
