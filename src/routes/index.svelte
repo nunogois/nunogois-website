@@ -1,6 +1,10 @@
 <script context="module">
 	import Navbar from '$components/navbar.svelte'
 
+	export function preload() {
+		return this.fetch('sitemap.xml') && this.fetch('rss.xml')
+	}
+
 	export async function load({ page, fetch }) {
 		if (page.host === 'cv.nunogois.com') {
 			return {
