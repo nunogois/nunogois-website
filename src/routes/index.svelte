@@ -2,9 +2,6 @@
 	import Navbar from '$components/navbar.svelte'
 
 	export async function load({ page, fetch }) {
-		await fetch('/sitemap.xml')
-		await fetch('/rss.xml')
-
 		if (page.host === 'cv.nunogois.com') {
 			return {
 				redirect: 'https://www.nunogois.com/cv',
