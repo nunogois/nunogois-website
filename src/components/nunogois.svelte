@@ -1,6 +1,8 @@
-<h1 class="uppercase text-4xl sm:text-7xl md:text-8xl lg:text-9xl font-light tracking-widest">
-	Nuno Góis
-</h1>
+<script lang="ts">
+	export let fontSize = 'text-4xl sm:text-7xl md:text-8xl lg:text-9xl'
+</script>
+
+<h1 class={`uppercase font-light tracking-widest ${fontSize}`}>Nuno Góis</h1>
 
 <style lang="postcss">
 	h1 {

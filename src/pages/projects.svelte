@@ -3,7 +3,7 @@
 	import GitHubProjects from '$components/github_projects.svelte'
 	import projectsImg from '$assets/projects.jpg'
 	import { years, DATE } from '$data/dates'
-	import { experience } from '$data/projects'
+	import { experience, interestingProject } from '$data/projects'
 
 	import Icon from '@iconify/svelte'
 
@@ -18,62 +18,6 @@
 
 	$: popular = projects.popular.filter(filterFn)
 	$: recent = projects.recent.filter(filterFn)
-
-	const interestingProject = [
-		{
-			name: 'Workflow Engine',
-			description: `Created a custom workflow engine that allowed end-users with the right permissions to create custom workflows, 
-      with several steps, permissions, routes, and more.`
-		},
-		{
-			name: 'Form Designer (Absolute Position)',
-			description: `Created a custom form designer, that works with the custom Workflow Engine, that allowed end-users 
-      with the right permissions to create web forms, containing tabs and absolute positioned UI elements, by dragging and 
-      dropping. Some of the elements were somewhat advanced, like tables, and would contain custom properties that could be configured.`
-		},
-		{
-			name: 'Form Designer (Responsive Layout)',
-			description: `Created a custom form designer that would replace the previous one, as a more modern and responsive option. 
-      Users could still drag, drop and resize elements, but the layout would be responsive, following the typical "12 column" 
-      grid layout.`
-		},
-		{
-			name: 'Custom JavaScript Framework (jQuery abstraction)',
-			description: `Created a custom JavaScript framework based / on top of jQuery to use along with the previous options. This added 
-      infinite possibilities, along with customization and integration options. This framework was meant as a very easy-to-use 
-      programming language for our own and also end-users with the right permissions, where most of what was needed could be accomplished using 
-      its simple functions. The framework went through several iterations, and this also included maintaining its documentation accordingly.`
-		},
-		{
-			name: 'Custom JavaScript Framework (Server-side / Scheduling)',
-			description: `As an extension to the previous idea, we also wanted to run custom logic from a server / scheduled, cron-like, perspective.
-      This used PhantomJS and Chrome headless along with a Windows Service to trigger our code based on configurable triggers.`
-		},
-		{
-			name: 'Code / Logic Wizard',
-			description: `Created a code / logic wizard, where end-users with no programming knowledge could easily configure their own logic.
-      This included creating a very specific parser and code generator, and also included functions, conditions, and parameters.`
-		},
-		{
-			name: 'PDF Text Extractor (OCR alternative)',
-			description: `Created a PDF text extractor, where PDFs were converted to HTML in a specific way that allowed end-users to configure
-      zones from where to grab text information. This could then be easily integrated with the previous projects, and proved a much faster
-      and accessible alternative to OCR.`
-		},
-		{
-			name: 'Legacy Custom File Format PDF Extraction',
-			description: `Created a PDF extractor from a custom file format of a legacy app that was no longer maintained. It aggregated several files,
-      including PDFs, which were required for our use-case. Had to evaluate bytes looking for file signatures without documentation as a guide,
-      using the so-called "magic numbers" to identify when PDFs started and ended.`
-		},
-		{
-			name: 'Data Matrix Code Scanner (Python Script)',
-			description: `Created a data matrix code scanner script in Python. The codes were scanned from a very large volume of TIFF files, so it had
-      to be extremely optimized. Besides managing the local files, it involved counting the percentage of yellow on the image (based on a configurable RGB range), 
-      so that a correct amount of codes to be scanned could be calculated, in order to speed up the process significantly. Learned and used tools like 
-      numpy, CV2, Wand, and more. It also involved querying data from a MySQL database and integrating everything with web-based APIs.`
-		}
-	]
 </script>
 
 <Section title="projects">

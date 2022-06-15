@@ -23,16 +23,45 @@ p a {
 	color: #93ceff;
 }
 
-.medium-feed-snippet {
-	padding: 20px;
-	height: 100%;
-	display: flex;
-	align-items: center;
-	text-align: justify;
+.blog-post p {
+  margin-bottom: 20px;
 }
 
-.medium-feed-item {
-	display: flex;
-	flex-direction: column;
-	height: 100%;
+.blog-post > .crayons-card {
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(51 51 51 / var(--tw-border-opacity));
+  border-radius: 0.75rem;
+  margin-bottom: 20px;
+}
+
+.blog-post > .crayons-card > .c-embed__cover img {
+  object-fit: cover;
+  max-height: 200px;
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+}
+
+.blog-post > .crayons-card > .c-embed__body {
+  padding: 20px;
+}
+
+.blog-post > .crayons-card > .c-embed__body > h2 {
+  margin-bottom: 8px;
+  color: #93ceff;
+}
+
+.blog-post > .crayons-card > .c-embed__body > .truncate-at-3 {
+  font-size: 0.875rem;
+  margin-bottom: 8px;
+}
+
+.blog-post > .crayons-card > .c-embed__body > .color-secondary {
+  font-size: 0.875rem;
+}
+
+.blog-post > .crayons-card .c-embed__favicon {
+  max-height: 18px;
+  width: auto;
+  margin-right: 14px;
 }

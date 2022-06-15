@@ -24,10 +24,11 @@
 	import About from '$pages/about.svelte'
 	import Skills from '$pages/skills.svelte'
 	import Projects from '$pages/projects.svelte'
+	import Blog from '$pages/blog.svelte'
 	import Cv from '$pages/cv.svelte'
 	import Contact from '$pages/contact.svelte'
 
-	export let skills, projects
+	export let skills, projects, blog
 </script>
 
 <Navbar />
@@ -36,5 +37,6 @@
 <About />
 <Skills {skills} />
 <Projects {projects} {skills} />
+<Blog {blog} />
 <Cv />
 <Contact />

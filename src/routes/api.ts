@@ -1,10 +1,12 @@
 import type { EndpointOutput } from '@sveltejs/kit'
+import type { JSONString } from '@sveltejs/kit/types/helper'
 
 export async function get(): Promise<EndpointOutput> {
 	return {
 		body: {
 			skills: await loadSkills(),
-			projects: await loadProjects()
+			projects: await loadProjects(),
+			blog: await loadBlog()
 		}
 	}
 }
@@ -27,8 +29,8 @@ const loadSkills = async () => {
 
 const loadProjects = async () => {
 	try {
-		const data = await fetch('https://api.github.com/users/nunogois/repos?per_page=100').then((res) =>
-			res.json()
+		const data = await fetch('https://api.github.com/users/nunogois/repos?per_page=100').then(
+			(res) => res.json()
 		)
 
 		const ignoreRepos = ['nunogois', 'nunogois-cv']
@@ -47,3 +49,6 @@ const loadProjects = async () => {
 		}
 	}
 }
+
+export const loadBlog = async (): Promise<JSONString[]> =>
+	await fetch('https://dev.to/api/articles/latest?username=nunogois').then((res) => res.json())
