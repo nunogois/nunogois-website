@@ -25,9 +25,9 @@
 			<div class="border border-light-gray rounded-xl">
 				<a sveltekit:prefetch href={`/blog/${slug}`} class="flex flex-col h-full">
 					<img src={cover_image} alt={title} class="w-full rounded-t-xl object-cover" />
-					<h5 class="flex justify-center items-center text-lg font-medium p-2 border-light-gray">
+					<h4 class="flex justify-center items-center text-lg font-medium p-2 border-light-gray">
 						{title}
-					</h5>
+					</h4>
 					<span class="text-xs text-gray-300 mb-1"
 						>{readable_publish_date} - {reading_time_minutes} min read</span
 					>

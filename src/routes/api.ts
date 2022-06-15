@@ -2,9 +2,6 @@ import type { EndpointOutput } from '@sveltejs/kit'
 import type { JSONString } from '@sveltejs/kit/types/helper'
 
 export async function get(): Promise<EndpointOutput> {
-	fetch('/sitemap.xml')
-	fetch('/rss.xml')
-
 	return {
 		body: {
 			skills: await loadSkills(),
