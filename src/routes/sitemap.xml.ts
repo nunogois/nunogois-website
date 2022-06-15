@@ -2,7 +2,7 @@ import { loadBlog } from './api'
 
 const website = 'https://www.nunogois.com'
 
-export async function get() {
+export async function get(): Promise<unknown> {
 	const posts = await loadBlog()
 	const body = sitemap(posts)
 
