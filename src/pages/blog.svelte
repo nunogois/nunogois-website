@@ -23,7 +23,7 @@
 	<div class="grid sm:grid-cols-2 md:grid-cols-3 gap-10">
 		{#each filteredBlog as { slug, title, description, readable_publish_date, cover_image, tag_list, positive_reactions_count, comments_count, reading_time_minutes }}
 			<div class="border border-light-gray rounded-xl">
-				<a href={`/blog/${slug}`} class="flex flex-col h-full">
+				<a sveltekit:prefetch href={`/blog/${slug}`} class="flex flex-col h-full">
 					<img src={cover_image} alt={title} class="w-full rounded-t-xl object-cover" />
 					<h5 class="flex justify-center items-center text-lg font-medium p-2 border-light-gray">
 						{title}
