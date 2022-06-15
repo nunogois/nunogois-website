@@ -27,7 +27,7 @@ const loadSkills = async () => {
 
 const loadProjects = async () => {
 	try {
-		const data = await fetch('https://api.github.com/users/nunogois/repos').then((res) =>
+		const data = await fetch('https://api.github.com/users/nunogois/repos?per_page=100').then((res) =>
 			res.json()
 		)
 
