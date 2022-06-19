@@ -1,5 +1,5 @@
 <script lang="ts">
-	import '../app.css'
+	import '$css/app.css'
 
 	const website = {
 		lang: 'en',

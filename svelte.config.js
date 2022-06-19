@@ -22,6 +22,7 @@ const config = {
 				alias: {
 					$assets: path.resolve('./src/assets'),
 					$components: path.resolve('./src/components'),
+					$css: path.resolve('./src/css'),
 					$data: path.resolve('./src/data'),
 					$pages: path.resolve('./src/pages')
 				}

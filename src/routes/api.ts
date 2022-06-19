@@ -51,4 +51,4 @@ const loadProjects = async () => {
 }
 
 export const loadBlog = async (): Promise<JSONString[]> =>
-	await fetch('https://dev.to/api/articles/latest?username=nunogois').then((res) => res.json())
+	await fetch('https://dev.to/api/articles?username=nunogois').then((res) => res.json())

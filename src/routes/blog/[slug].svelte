@@ -17,6 +17,8 @@
 </script>
 
 <script lang="ts">
+	import '$css/blog.scss'
+
 	export let post
 </script>
 
