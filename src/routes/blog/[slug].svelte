@@ -1,4 +1,4 @@
-<script context="module">
+<script context="module" lang="ts">
 	import Nunogois from '$components/nunogois.svelte'
 
 	import Icon from '@iconify/svelte'
@@ -16,7 +16,7 @@
 	}
 </script>
 
-<script>
+<script lang="ts">
 	export let post
 </script>
 
@@ -48,7 +48,7 @@
 				</div>
 			</div>
 		</div>
-		<a href={post.url} class="mt-4 text-center">React to this blog post on DEV Community 👩‍💻👨‍💻</a>
-		<a href="/" class="mt-4 text-center text-sm">www.nunogois.com</a>
+		<a href={post.url} class="mt-5 text-center">React to this blog post on DEV Community 👩‍💻👨‍💻</a>
+		<a href="/" class="my-5 text-center text-sm">www.nunogois.com</a>
 	</div>
 </div>

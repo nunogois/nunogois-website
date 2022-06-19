@@ -1,4 +1,4 @@
-<script context="module">
+<script context="module" lang="ts">
 	import Navbar from '$components/navbar.svelte'
 
 	export async function load({ page, fetch }) {
