@@ -1,5 +1,6 @@
 import type { EndpointOutput } from '@sveltejs/kit'
 import type { JSONString } from '@sveltejs/kit/types/helper'
+import axios from 'axios'
 
 export async function get(): Promise<EndpointOutput> {
 	return {
@@ -51,4 +52,4 @@ const loadProjects = async () => {
 }
 
 export const loadBlog = async (): Promise<JSONString[]> =>
-	await fetch('https://dev.to/api/articles?username=nunogois').then((res) => res.json())
+	await axios('https://dev.to/api/articles?username=nunogois&t=39898').then((res) => res.data)
