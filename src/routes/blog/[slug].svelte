@@ -17,7 +17,10 @@
 </script>
 
 <script lang="ts">
+	import { onMount } from 'svelte'
 	import '$css/blog.scss'
+
+	onMount(() => window?.scrollTo({ top: 0 }))
 
 	export let post
 </script>
