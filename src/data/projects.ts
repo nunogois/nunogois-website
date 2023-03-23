@@ -47,7 +47,7 @@ export const interestingProject = [
 	{
 		name: 'Workflow Engine',
 		description: `Created a custom workflow engine that allowed end-users with the right permissions to create custom workflows, 
-    with several steps, permissions, routes, and more.`
+    with several steps, approvals, permissions, routes, and more.`
 	},
 	{
 		name: 'Form Designer (Absolute Position)',

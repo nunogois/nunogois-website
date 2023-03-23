@@ -3,6 +3,7 @@
 	import aboutImg from '$assets/about.jpg'
 	import carbonImg from '$assets/carbon.png'
 	import { years, DATE } from '$data/dates'
+	import { scrollTo } from '$utils/scrollTo'
 </script>
 
 <Section title="about">
@@ -10,13 +11,18 @@
 		<img src={carbonImg} alt="About me" class="mx-auto hidden md:block" />
 	</div>
 	<p class="py-5 text-justify">
-		<span class="font-bold">Hello World!</span><br />My name is Nuno Góis. I am an experienced and
-		driven {years(DATE.BIRTHDAY)} years old Full-Stack Developer from Portugal. Passionate for the job,
-		love putting skills to the test, facing challenges in a creative and perfectionist way. Experienced
-		with every step of developing and delivering cross-platform, modern and responsive software. Worked
-		with several different technologies across the stack, always willing to learn more and improve skills.
-		Biggest strengths lie in bringing a focused, creative and out-of-the-box approach to challenges,
-		leveraging hard-working and quick learning traits.
+		<span class="font-bold">Hello World!</span><br /><br />My name is Nuno Góis. I am a creative and
+		driven {years(DATE.BIRTHDAY)} year old Full-Stack Developer from Portugal, with over {years(
+			DATE.PROFESSIONAL
+		)} years of professional
+		<a href={'javascript:;'} on:click={() => scrollTo('experience')}>experience</a>. Passionate for
+		the job, love putting skills to the test, facing challenges in a creative and perfectionist way.
+		Experienced with every step of developing and delivering cross-platform, modern and responsive
+		software, providing end-users the best experience I can. Worked with several different
+		<a href={'javascript:;'} on:click={() => scrollTo('skills')}>technologies</a> across the stack, always
+		willing to learn more and improve skills. I excel at taking a focused, creative, out-of-the-box approach
+		to challenges, leveraging my adaptability, hard-working nature, and quick-learning abilities to deliver
+		quality results.
 	</p>
 	<div class="border border-light-gray p-10 lg:flex lg:p-0 rounded-xl overflow-hidden">
 		<img
@@ -29,19 +35,24 @@
 				My goal in life is to be the best version of myself that I can, trying to improve every day.
 			</p>
 			<p class="text-justify pt-5">
-				I love coding, it's super fun and gratifying. As an INTJ, I am focused, rational, introvert
-				and a bit of a loner. I'm a better listener than talker. I am a college dropout and
-				self-taught. I have Crohn's so I have a limited diet and don't drink or smoke. I try my best
+				I love coding, it's super fun and gratifying. I am focused, rational, introspective and a
+				bit of a loner. I'm a better listener than talker. I am a college dropout and self-taught. I
+				have a preference for hands-on learning and enjoy applying my knowledge to real-world
+				situations. I have Crohn's so I have a limited diet and don't drink or smoke. I try my best
 				to stay healthy.<br />I love videogames, tech, music, movies, TV series, reading, writing,
 				running, hiking and many other things.<br />
+				<br />
 				Feel free to ask me anything!
 			</p>
 		</div>
 	</div>
 	<p class="pt-5 text-justify">
-		What makes me unique is my creativity and adaptability. More than a developer, I like to think
-		of myself as an inventor and creator. I love tackling unique challenges, thinking of solutions
-		and coming up with ideas. I'm generally at my best when I'm in a smaller-sized team, free to
-		learn and think, and working on a challenging and fun project that I'm passionate about.
+		My passion for technology and providing innovative quality experiences has driven me to become a
+		versatile and creative Full-Stack Developer. What makes me stand out is my creativity and
+		adaptability. More than a developer, I like to think of myself as an inventor and creator.
+		Focused on discovery and experimentation, I feel right at home on quick spikes and hackathons. I
+		love tackling unique challenges, thinking of solutions and coming up with ideas. I usually
+		thrive in a dynamic, smaller-sized collaborative environment where I can learn and innovate
+		while working on challenging, passion-driven projects.
 	</p>
 </Section>

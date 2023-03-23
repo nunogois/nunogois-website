@@ -26,7 +26,7 @@
 	import Home from '$pages/home.svelte'
 	import About from '$pages/about.svelte'
 	import Skills from '$pages/skills.svelte'
-	import Projects from '$pages/projects.svelte'
+	import Experience from '$pages/experience.svelte'
 	import Blog from '$pages/blog.svelte'
 	import Cv from '$pages/cv.svelte'
 	import Contact from '$pages/contact.svelte'
@@ -39,7 +39,7 @@
 <Home />
 <About />
 <Skills {skills} />
-<Projects {projects} {skills} />
+<Experience {projects} {skills} />
 <Blog {blog} />
 <Cv />
 <Contact />

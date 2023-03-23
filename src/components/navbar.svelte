@@ -1,10 +1,5 @@
 <script lang="ts">
-	function scrollTo(element: string) {
-		window.scrollTo({
-			top: element === 'home' ? 0 : document.getElementById(element).offsetTop - 50,
-			behavior: 'smooth'
-		})
-	}
+	import { scrollTo } from '$utils/scrollTo'
 </script>
 
 <div
@@ -13,7 +8,7 @@
 	<a href={'javascript:;'} on:click={() => scrollTo('home')} class="hidden md:block">HOME</a>
 	<a href={'javascript:;'} on:click={() => scrollTo('about')}>ABOUT</a>
 	<a href={'javascript:;'} on:click={() => scrollTo('skills')}>SKILLS</a>
-	<a href={'javascript:;'} on:click={() => scrollTo('projects')}>PROJECTS</a>
+	<a href={'javascript:;'} on:click={() => scrollTo('experience')}>EXPERIENCE</a>
 	<a href={'javascript:;'} on:click={() => scrollTo('blog')}>BLOG</a>
 	<a href={'javascript:;'} on:click={() => scrollTo('cv')}>CV</a>
 	<a href={'javascript:;'} on:click={() => scrollTo('contact')}>CONTACT</a>

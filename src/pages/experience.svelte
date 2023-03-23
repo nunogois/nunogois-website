@@ -20,23 +20,28 @@
 	$: recent = projects.recent.filter(filterFn)
 </script>
 
-<Section title="projects">
+<Section title="experience">
 	<div class="border border-light-gray p-10 lg:flex lg:p-0 rounded-xl overflow-hidden mt-5">
 		<img
 			class="w-32 h-32 mx-auto rounded-full lg:mx-0 lg:rounded-none lg:w-52 lg:h-auto object-cover"
 			src={projectsImg}
-			alt="projects"
+			alt="experience"
 		/>
 		<div class="pt-6 lg:p-8 items-center">
 			<p class="text-justify font-bold">
-				With over {years(DATE.PROFESSIONAL)} years of professional experience, I have been extremely
-				fortunate to have worked in exciting projects with very talented people.
+				With over {years(DATE.PROFESSIONAL)} years of professional experience, I was extremely fortunate
+				to have had the opportunity to work on exciting projects with very talented people.
 			</p>
 			<p class="text-justify pt-5">
-				I had a lot of fun solving the problems that I have faced in my career and I can't wait to
-				see what's next.<br />
-				Besides professional projects, I'm always thinking of new personal projects to tackle. They are
-				fantastic opportunities to learn more and add to my experience.
+				I'm very proud of all that I have accomplished so far. It brings me joy to know that I have
+				had a real impact, not only on the end result but also on the people I have collaborated
+				with and end-users. Whether developing small or large projects, improving the experience of
+				my colleagues and end-users, or solving complex problems, I always strive to give my best
+				and have fun doing it.
+				<br />
+				In addition to my professional work, I constantly challenge myself with personal projects to
+				continue learning and growing my skills.
+				<br /><br />I can't wait to see what comes next!
 			</p>
 		</div>
 	</div>
@@ -66,11 +71,10 @@
 		<h3 class="text-left text-xl ml-2">Interesting Projects</h3>
 	</div>
 	<p class="text-justify pt-5">
-		Since I'm used to people approaching me with unique challenges and ideas, and coming up with
-		them myself, and then figuring out what it means to engineer those challenges and ideas to life,
-		I had the chance to work on some very interesting projects. For some of them I also had to work
-		with very limited resources, including time. They also help explain the developer I have become
-		over time.
+		Over the years, I have been approached with a variety of unique challenges and ideas, as well as
+		coming up with my own. Through these experiences, I have had the opportunity to work on some
+		truly interesting projects, even with limited resources such as time. These experiences have
+		helped shape me into the versatile and creative developer I am today.
 	</p>
 	{#each interestingProject as { name, description }}
 		<details>

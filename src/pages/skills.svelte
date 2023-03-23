@@ -5,30 +5,34 @@
 	export let skills
 	let filter = ''
 	$: filteredSkills = skills.filter((s) => s.name.toLowerCase().includes(filter.toLowerCase()))
-
-	const preferences = {
-		OS: 'macOS, Pop!_OS',
-		Shell: 'Zsh',
-		Editor: 'VSCode',
-		Keyboard: 'ISO, MX Brown',
-		Linter: 'ESLint',
-		Formatter: 'Prettier',
-		General: 'TypeScript',
-		Framework: 'Vue',
-		App: 'Quasar Framework (Vue)',
-		Website: 'Svelte',
-		'Back-end': '.NET (C#)',
-		API: 'TypeScript',
-		Cloud: 'AWS, Cloudflare',
-		Scripts: 'Go, Python',
-		SQL: 'SQL Server',
-		NoSQL: 'MongoDB',
-		Browser: 'Chrome',
-		Mobile: 'Android'
-	}
 </script>
 
 <Section title="skills">
+	<div class="border border-light-gray p-10 lg:flex lg:p-0 rounded-xl overflow-hidden mt-5">
+		<img
+			class="w-32 h-32 mx-auto rounded-full lg:mx-0 lg:rounded-none lg:w-52 lg:h-auto object-cover"
+			src={skillsImg}
+			alt="skills"
+		/>
+		<div class="pt-6 lg:p-8 items-center">
+			<p class="text-justify font-bold">
+				You'll find me constantly looking for new technologies to learn, explore and experiment
+				with. One of the best parts of the tech landscape is that it's changing all the time, so it
+				never gets boring.
+			</p>
+			<p class="text-justify pt-5">
+				As a Full-Stack Developer, I constantly seek out new technologies and techniques to learn
+				and explore. I have experience in both front-end and back-end development, and I am always
+				adapting and adding to my knowledge. Thanks to my experience, I am able to quickly adapt to
+				new technologies and frameworks. It's generally easy for me to join a new project and learn
+				the stack being used in a short amount of time, so only looking at the technologies I used
+				in the past may prove somewhat limiting.
+				<br /><br />
+				Below are some of the technologies I've worked with or interacted with in the past.
+			</p>
+		</div>
+	</div>
+
 	<input
 		bind:value={filter}
 		class="bg-transparent outline-none border-none w-full my-5"
@@ -48,39 +52,6 @@
 	{:else}
 		<p class="text-justify mt-5">{filteredSkills.map((s) => s.name).join(', ') + '.'}</p>
 	{/if}
-	<p class="text-justify my-5">
-		As a Full-Stack Developer, I don't have a clear preference between front-end and back-end. I am
-		experienced with every step of the stack and constantly adapting and adding to my knowledge. I
-		reached a point professionally where it's generally easy for me to join a new project and learn
-		the stack being used in a short amount of time, due to my experience, so I think only looking at
-		the tools that I use can prove somewhat limiting. Besides this simplistic overview of my
-		experience across the tech stack, these are some of my current preferences:
-	</p>
-	<div class="border border-light-gray p-10 lg:flex lg:p-0 rounded-xl overflow-hidden">
-		<img
-			class="w-32 h-32 mx-auto rounded-full lg:mx-0 lg:rounded-none lg:w-52 lg:h-auto object-cover"
-			src={skillsImg}
-			alt="skills"
-		/>
-		<div class="flex pt-6 lg:p-8 w-full flex-col">
-			<div class="grid md:grid-cols-2 w-full text-left">
-				{#each Object.keys(preferences) as key}
-					<div>
-						<span class="font-bold">{key}:</span>
-						{preferences[key]}
-					</div>
-				{/each}
-			</div>
-			<p class="text-left pt-5">
-				<span class="font-bold">Looking forward to learn more about:</span> Rust, WebAssembly
-			</p>
-		</div>
-	</div>
-	<p class="text-justify mt-5">
-		Despite this, you'll find me constantly looking for new things to learn and experiment with. One
-		of the best parts of the tech landscape is that it's changing all the time, so it never gets
-		boring.
-	</p>
 </Section>
 
 <style>

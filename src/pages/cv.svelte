@@ -9,6 +9,7 @@
 		>
 		or <a href="https://cv.nunogois.com" target="_blank">cv.nunogois.com</a>.
 		<br />
+		<br />
 		If you prefer, you can also download it as PDF for a more traditional offline format.
 	</p>
 </Section>
