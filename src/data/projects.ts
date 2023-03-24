@@ -19,6 +19,7 @@ Collaborated closely with the UI/UX team to identify and implement numerous impr
 Contributed to documentation, including the official docs and READMEs.
 Refactored and improved the codebase, improving maintainability and overall DX.
 Trained as Site Reliability Engineer (SRE) and performed on-call shifts to ensure platform availability and end-user satisfaction.
+Consistently provided valuable feedback and code reviews to fellow developers, improving code quality and maintaining high standards for the codebase
 Shared knowledge and learned with teammates through pair and mob programming.`
 	},
 	{
