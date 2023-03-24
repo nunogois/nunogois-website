@@ -22,7 +22,7 @@
 		<a href={'javascript:;'} on:click={() => scrollTo('skills')}>technologies</a> across the stack, always
 		willing to learn more and improve skills. I excel at taking a focused, creative, out-of-the-box approach
 		to challenges, leveraging my adaptability, hard-working nature, and quick-learning abilities to deliver
-		quality results.
+		striking results.
 	</p>
 	<div class="border border-light-gray p-10 lg:flex lg:p-0 rounded-xl overflow-hidden">
 		<img

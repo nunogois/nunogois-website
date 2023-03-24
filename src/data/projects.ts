@@ -9,7 +9,17 @@ export const experience = [
 		url: 'https://www.getunleash.io/',
 		role: 'Full-Stack Developer',
 		date: '04/2022 - Current',
-		description: ''
+		description: `Contributed to Unleash, an open-source feature flag management solution with over 18M docker pulls, 7K stars on GitHub and a worldwide user base consisting of every kind of end-user, from individual developers to large enterprise companies.
+Integrated with Stripe for billing, involving multiple projects and third party integrations, enabling end-users to sign up and manage their paid plans through their Unleash instance.
+Developed several key features for the product, including Service Accounts, Login History, Groups, Personal Access Tokens (PATs), Environment Cloning, Tag Filtering, Network Visualization, and Search Filtering.
+Contributed to Unleash Edge, a highly-performant successor to Unleash Proxy written in Rust that allows for a more flexible, performant, resilient and scalable architecture.
+Created, developed and maintained multiple SDKs for the product, including Vue.js, Svelte, Solid, and React Native.
+Contributed with ideas and suggestions to the product roadmap, helping to shape the future of the product.
+Collaborated closely with the UI/UX team to identify and implement numerous improvements and fixes that significantly enhanced the end-user experience.
+Contributed to documentation, including the official docs and READMEs.
+Refactored and improved the codebase, improving maintainability and overall DX.
+Trained as Site Reliability Engineer (SRE) and performed on-call shifts to ensure platform availability and end-user satisfaction.
+Shared knowledge and learned with teammates through pair and mob programming.`
 	},
 	{
 		name: 'Zoi',

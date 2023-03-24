@@ -1,15 +1,3 @@
-<script context="module" lang="ts">
-	export async function load({ fetch }) {
-		const res = await fetch('/api')
-
-		if (res.ok) {
-			return {
-				props: await res.json()
-			}
-		}
-	}
-</script>
-
 <script lang="ts">
 	import Icon from '@iconify/svelte'
 
@@ -18,8 +6,6 @@
 
 	import aboutImg from '$assets/about.jpg'
 	import ccpImg from '$assets/aws-ccp.png'
-
-	export let skills
 
 	const signature = `Thank you for your time.
 © ${new Date().getFullYear()} - Nuno Góis`
@@ -48,24 +34,20 @@
 				</div>
 			</div>
 			<p class="text-justify text-xs mt-2">
-				Driven {years(DATE.BIRTHDAY)} years old from Portugal with over {years(DATE.PROFESSIONAL)} years
+				Driven {years(DATE.BIRTHDAY)} year old from Portugal with over {years(DATE.PROFESSIONAL)} years
 				of professional experience. Passionate for the job, love putting skills to the test, facing challenges
 				in a creative and perfectionist way. Experienced with every step of developing and delivering
-				cross-platform, modern and responsive software.
+				cross-platform, modern and responsive software, providing end-users the best experience I can.
 			</p>
 		</div>
 	</div>
 
 	<p class="text-justify text-xs mt-2">
-		Biggest strengths lie in bringing a focused, creative and out-of-the-box approach to challenges,
-		leveraging hard-working and quick learning traits. Worked with several different technologies
-		across the stack, always willing to learn more and improve skills. Some of those include, but
-		are not limited to:
+		Worked with several different technologies across the stack, always willing to learn more and
+		improve skills. I excel at taking a focused, creative, out-of-the-box approach to challenges,
+		leveraging my adaptability, hard-working nature, and quick-learning abilities to deliver
+		striking results.
 	</p>
-
-	<div class="text-justify text-xs mt-2">
-		{`${skills.map((s) => s.name).join(', ')}.`}
-	</div>
 
 	<div class="flex mt-2">
 		<a
