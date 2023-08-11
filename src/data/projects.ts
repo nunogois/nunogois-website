@@ -7,7 +7,7 @@ export const experience = [
 		name: 'Unleash',
 		image: unleashImg,
 		url: 'https://www.getunleash.io/',
-		role: 'Full-Stack Developer',
+		role: 'Full-Stack Developer (Senior)',
 		date: '04/2022 - Current',
 		description: `Contributed to Unleash, an open-source feature flag management solution with over 18M docker pulls, 7K stars on GitHub and a worldwide user base consisting of every kind of end-user, from individual developers to large enterprise companies.
 Integrated with Stripe for billing, involving multiple projects and third party integrations, enabling end-users to sign up and manage their paid plans through their Unleash instance.
