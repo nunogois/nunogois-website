@@ -1,5 +1,0 @@
-User-Agent: *
-Disallow: 
-Allow: /
-
-Sitemap: https://www.nunogois.com/sitemap.xml
