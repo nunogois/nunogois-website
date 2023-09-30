@@ -1,0 +1,4 @@
+export enum DATE {
+  BIRTHDAY = '1989-12-27',
+  PROFESSIONAL = '2011-03-01'
+}
