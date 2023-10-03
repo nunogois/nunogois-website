@@ -1,18 +1,18 @@
 ---
 import { Image } from 'astro:assets'
 import { Icon } from 'astro-icon/components'
+import Layout from '../layouts/Layout.astro'
 import aboutImg from '../assets/about.jpg'
 import ccpImg from '../assets/aws-ccp.png'
 import { DATE } from '../constants/dates'
 import { EXPERIENCE } from '../constants/projects'
 import { years } from '../utils/years'
-import Layout from '../layouts/Layout.astro'
 
 const signature = `Thank you for your time.
 © ${new Date().getFullYear()} - Nuno Góis`
 ---
 
-<Layout title='Nuno Góis - Full Stack Developer'>
+<Layout title='CV'>
   <div
     class='max-w-screen-md mx-auto pb-6 px-5 print:my-0 print:h-screen print:bg-white print:text-black print:py-0'
   >

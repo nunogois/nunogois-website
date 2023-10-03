@@ -1,19 +1,20 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import Home from '../components/sections/Home.astro'
-import About from '../components/sections/About.astro'
-import Skills from '../components/sections/Skills.astro'
-import Experience from '../components/sections/Experience.astro'
-import { fetchSkills } from '../api/skills'
-import { fetchProjects } from '../api/projects'
-
-const skills = await fetchSkills()
-const projects = await fetchProjects()
+import Nunogois from '../components/Nunogois.astro'
 ---
 
-<Layout title='Nuno Góis - Full Stack Developer' home>
-  <Home />
-  <About />
-  <Skills {skills} />
-  <Experience projects={projects} {skills} />
+<Layout home>
+  <section
+    class='flex justify-center items-center text-center min-h-screen h-px'
+  >
+    <div>
+      <div class='animate-fadeInDown'>
+        <Nunogois />
+      </div>
+      <hr class='my-5 border-none h-px bg-light-gray' />
+      <h2 class='text-xl sm:text-4xl lg:text-5xl font-thin animate-fadeInUp'>
+        Full Stack Developer
+      </h2>
+    </div>
+  </section>
 </Layout>

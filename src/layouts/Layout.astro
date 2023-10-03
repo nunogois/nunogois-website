@@ -3,13 +3,16 @@ import { ViewTransitions } from 'astro:transitions'
 import Header from '../components/layout/Header.astro'
 import Footer from '../components/layout/Footer.astro'
 
+const WEBSITE_TITLE = 'Nuno Góis - Full Stack Developer'
+
 interface Props {
-  title: string
+  title?: string
   home?: boolean
 }
 
 const { title, home } = Astro.props
 const mainClass = home ? '' : 'pt-20'
+const layoutTitle = title ? `${WEBSITE_TITLE} - ${title}` : WEBSITE_TITLE
 ---
 
 <!doctype html>
@@ -20,7 +23,7 @@ const mainClass = home ? '' : 'pt-20'
     <meta name='viewport' content='width=device-width' />
     <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
     <meta name='generator' content={Astro.generator} />
-    <title>{title}</title>
+    <title>{layoutTitle}</title>
 
     <ViewTransitions />
   </head>

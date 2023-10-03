@@ -9,16 +9,21 @@ module.exports = {
       },
       animation: {
         fadeInDown: 'fadeInDown 2s ease-in-out',
-        fadeInUp: 'fadeInUp 2s ease-in-out'
+        fadeInUp: 'fadeInUp 2s ease-in-out',
+        textHue: 'hue 10s infinite linear'
       },
       keyframes: {
         fadeInDown: {
-          '0%': { opacity: 0.1, transform: 'translateY(-80px)' },
-          '100%': { opacity: 1, transform: 'translateY(0)' }
+          from: { opacity: 0.1, transform: 'translateY(-80px)' },
+          to: { opacity: 1, transform: 'translateY(0)' }
         },
         fadeInUp: {
-          '0%': { opacity: 0.1, transform: 'translateY(80px)' },
-          '100%': { opacity: 1, transform: 'translateY(0)' }
+          from: { opacity: 0.1, transform: 'translateY(80px)' },
+          to: { opacity: 1, transform: 'translateY(0)' }
+        },
+        hue: {
+          from: { filter: 'hue-rotate(-360deg)' },
+          to: { filter: 'hue-rotate(0deg)' }
         }
       }
     }
