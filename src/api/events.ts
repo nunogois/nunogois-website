@@ -31,7 +31,9 @@ export const fetchEvents = async (): Promise<Event[]> => {
         if (!eventMap.has(key)) eventMap.set(key, event)
       } else if (isPushEvent(event) && event.payload.ref === MAIN) {
         const key = `${event.repo.name}-${
-          event.payload.commits[0].message.split(')\n')[0].split('#')[1]
+          event.payload.commits[event.payload.commits.length - 1].message
+            .split(')\n')[0]
+            .split('#')[1]
         }`
         if (!eventMap.has(key)) eventMap.set(key, event)
       } else if (
