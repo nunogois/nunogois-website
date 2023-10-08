@@ -1,0 +1,72 @@
+---
+import { ViewTransitions } from 'astro:transitions'
+import Header from '../components/layout/Header.astro'
+import Footer from '../components/layout/Footer.astro'
+
+const WEBSITE = {
+  lang: 'en',
+  title: 'Nuno Góis - Full Stack Developer',
+  description:
+    'Portuguese Full Stack Developer with more than a decade of expertise. Proficient in every phase of software development.',
+  url: 'https://www.nunogois.com',
+  twitter: '@nunogois_dev'
+}
+
+interface Props {
+  title?: string
+  home?: boolean
+}
+
+const { title, home } = Astro.props
+const mainClass = home ? '' : 'pt-20 print:pt-0'
+const layoutTitle = title ? `${WEBSITE.title} - ${title}` : WEBSITE.title
+const canonicalURL = `${WEBSITE.url}${new URL(Astro.request.url).pathname}`;
+---
+
+<!doctype html>
+<html lang={WEBSITE.lang} class='bg-background text-white scroll-smooth'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name="theme-color" content="#13151a" />
+    <title>{layoutTitle}</title>
+    <meta name='description' content={WEBSITE.description} />
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta
+      name="robots"
+      content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    />
+    <link rel="canonical" href={canonicalURL} />
+    <meta
+      property="og:type"
+      prefix="http://ogp.me/ns# website: http://ogp.me/ns/website#"
+      content="website"
+    />
+    <meta property="og:title" prefix="og: http://ogp.me/ns#" content={WEBSITE.title} />
+    <meta property="og:description" prefix="og: http://ogp.me/ns#" content={WEBSITE.description} />
+    <meta
+      property="og:image"
+      prefix="og: http://ogp.me/ns#"
+      content={WEBSITE.url + '/thumbnail.png'}
+    />
+    <meta property="og:url" prefix="og: http://ogp.me/ns#" content={WEBSITE.url} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={WEBSITE.title} />
+    <meta name="twitter:description" content={WEBSITE.description} />
+    <meta name="twitter:image" content={WEBSITE.url + '/thumbnail.png'} />
+    <meta name="twitter:url" content={WEBSITE.url} />
+    <meta name="twitter:site" content={WEBSITE.twitter} />
+    <meta name="twitter:creator" content={WEBSITE.twitter} />
+    <meta name='generator' content={Astro.generator} />
+
+    <ViewTransitions />
+  </head>
+  <body>
+    <Header />
+    <main class={mainClass}>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

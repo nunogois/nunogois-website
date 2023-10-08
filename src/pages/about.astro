@@ -1,0 +1,85 @@
+---
+import { Image } from 'astro:assets'
+import Layout from '../layouts/Layout.astro'
+import Section from '../components/Section.astro'
+import aboutImg from '../assets/photos/about.jpg'
+import skillsImg from '../assets/skills.png'
+import experienceImg from '../assets/experience.png'
+import { DATE } from '../constants/dates'
+import { years } from '../utils/years'
+import ScrollFadeIn from '../components/ScrollFadeIn.astro'
+import LinkBox from '../components/LinkBox.astro'
+---
+
+<Layout title='About'>
+  <Section title='about'>
+    <ScrollFadeIn stayShown>
+      <p class="mt-10 mb-5 text-left font-bold">
+        Hello World!
+      </p>
+      <p class='my-5 text-left'>
+        My name is Nuno Góis. I am a creative and driven {years(DATE.BIRTHDAY)} year old
+        Full Stack Developer from Portugal, with over {years(DATE.PROFESSIONAL)}
+        years of professional
+        <a href='#experience'>experience</a>. Passionate for the job, love putting
+        skills to the test, facing challenges in a creative and perfectionist way.
+        Experienced with every step of developing and delivering cross-platform,
+        modern and responsive software, providing end-users the best experience I
+        can. Worked with several different
+        <a href='#skills'>technologies</a> across the stack, always willing to
+        learn more and improve skills. I excel at taking a focused, creative,
+        out-of-the-box approach to challenges, leveraging my adaptability,
+        hard-working nature, and quick-learning abilities to deliver striking
+        results.
+      </p>
+      <div
+        class='my-10 flex flex-col lg:flex-row gap-10 rounded-xl overflow-hidden justify-center items-center'
+      >
+        <Image
+          class='flex-shrink-0 w-32 h-32 mx-auto rounded-full md:w-52 md:h-52 object-cover object-center'
+          src={aboutImg}
+          alt='about'
+        />
+        <div class='items-center'>
+          <p class='text-left font-bold'>
+            My goal in life is to be the best version of myself that I can, trying
+            to improve every day.
+          </p>
+          <p class='text-left mt-5'>
+            I love coding, it's super fun and gratifying. I am focused, rational,
+            introspective and a bit of a loner. I'm a better listener than talker.
+            I am a college dropout and self-taught. I have a preference for
+            hands-on learning and enjoy applying my knowledge to real-world
+            situations. I have Crohn's so I have a limited diet and don't drink or
+            smoke. I try my best to stay healthy.<br />I love videogames, tech,
+            music, movies, TV series, reading, writing, running, hiking and many
+            other things.<br />
+            <br />
+            Feel free to ask me anything!
+          </p>
+        </div>
+      </div>
+      <p class='mt-5 text-left'>
+        My passion for technology and providing innovative quality experiences has
+        driven me to become a versatile and creative Full Stack Developer. What
+        makes me stand out is my creativity and adaptability. More than a
+        developer, I like to think of myself as an inventor and creator. Focused
+        on discovery and experimentation, I feel right at home on quick spikes and
+        hackathons. I love tackling unique challenges, thinking of solutions and
+        coming up with ideas. I usually thrive in a dynamic, smaller-sized
+        collaborative environment where I can learn and innovate while working on
+        challenging, passion-driven projects.
+      </p>
+    </ScrollFadeIn>
+  </Section>
+  <section class="flex my-40 justify-center items-center">
+    <ScrollFadeIn class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-10 max-w-5xl mx-6">
+      <LinkBox href="/skills" title="SKILLS" description="I've had my hands on numerous tech stacks and am always on the lookout for the next thing to learn. Explore my skill set.">
+        <Image src={skillsImg} class="w-20 h-20 md:w-44 md:h-44" alt="Skills" />
+      </LinkBox>
+      <LinkBox href="/experience" title="EXPERIENCE" extraClass="delay-100" description="From professional milestones to personal projects. Delve into my professional journey and see what I've been up to.">
+        <Image src={experienceImg} class="w-20 h-20 md:w-44 md:h-44" alt="Experience" />
+      </LinkBox>
+    </ScrollFadeIn>
+  </section>
+</Layout>

@@ -1,0 +1,80 @@
+---
+import { Image } from 'astro:assets'
+import Layout from '../layouts/Layout.astro'
+import Section from '../components/Section.astro'
+import skillsImg from '../assets/photos/skills.jpg'
+import aboutImg from '../assets/about.png'
+import experienceImg from '../assets/experience.png'
+import { fetchSkills } from '../api/skills'
+import ScrollFadeIn from '../components/ScrollFadeIn.astro'
+import LinkBox from '../components/LinkBox.astro'
+
+const skills = await fetchSkills()
+---
+
+<Layout title='Skills'>
+  <Section title='skills'>
+    <ScrollFadeIn stayShown>
+      <div
+        class='my-10 flex flex-col lg:flex-row gap-10 rounded-xl justify-center items-center'
+      >
+        <Image
+          class='flex-shrink-0 w-32 h-32 mx-auto rounded-full md:w-52 md:h-52 object-cover object-center'
+          src={skillsImg}
+          alt='skills'
+        />
+        <div class='items-center'>
+          <p class='text-left font-bold'>
+            You'll find me constantly looking for new technologies to learn,
+            explore and experiment with. One of the best parts of the tech
+            landscape is that it's changing all the time, so it never gets boring.
+          </p>
+          <p class='text-left mt-5'>
+            As a Full Stack Developer, I constantly seek out new technologies and
+            techniques to learn and explore. I have experience in both front-end
+            and back-end development, and I am always adapting and adding to my
+            knowledge. Thanks to my experience, I am able to quickly adapt to new
+            technologies and frameworks. It's generally easy for me to join a new
+            project and learn the stack being used in a short amount of time, so
+            only looking at the technologies I used in the past may prove somewhat
+            limiting.
+            <br /><br />
+            Below are some of the technologies I've worked with or interacted
+            with in the past.
+          </p>
+        </div>
+      </div>
+
+      <div class='my-10 flex flex-wrap gap-2 md:gap-y-2 md:gap-3'>
+        {
+          skills.map(({ name, image }) => (
+            <div class='flex flex-col'>
+              <img
+                src={image}
+                alt={name}
+                class='rounded-xl object-cover w-7 h-7 object-[-3px] md:w-12 md:h-12 md:object-[-5px]'
+                title={name}
+              />
+            </div>
+          ))
+        }
+      </div>
+      <p class='text-justify mt-5 text-sm text-neutral-400'>
+        {skills.map(({ name }) => name).join(', ') + '.'}
+      </p>
+      <p class="text-left mt-5">
+        Don't find something you're looking for? Check out my GitHub projects or ask me directly!
+      </p>
+    </ScrollFadeIn>
+  </Section>
+  <section class="flex my-40 justify-center items-center">
+    <ScrollFadeIn class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-10 max-w-5xl mx-6">
+      <LinkBox href="/about" title="ABOUT" description="Get to know my journey, my love for coding, and the things that keep me going. Learn more about the person behind the code.">
+        <Image src={aboutImg} class="w-20 h-20 md:w-44 md:h-44" alt="About" />
+      </LinkBox>
+      <LinkBox href="/experience" title="EXPERIENCE" extraClass="delay-100" description="From professional milestones to personal projects. Delve into my professional journey and see what I've been up to.">
+        <Image src={experienceImg} class="w-20 h-20 md:w-44 md:h-44" alt="Experience" />
+      </LinkBox>
+    </ScrollFadeIn>
+  </section>
+</Layout>

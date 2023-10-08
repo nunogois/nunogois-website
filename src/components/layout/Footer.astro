@@ -1,0 +1,50 @@
+---
+import { Icon } from 'astro-icon/components'
+import Nunogois from '../Nunogois.astro'
+---
+
+<footer
+  class='flex justify-around p-10 flex-col md:flex-row w-full print:hidden bg-slate-900 gap-6'
+>
+  <div class='flex flex-col justify-center text-sm gap-4 flex-shrink-0'>
+    <a
+      href='https://github.com/nunogois'
+      target='_blank'
+      class='flex items-center gap-2 hover:underline focus:underline'
+    >
+      <Icon name='fa6-brands:github' class='w-6 h-6' /><span
+        >github.com/nunogois</span
+      ></a
+    >
+    <a
+      href='https://twitter.com/nunogois_dev'
+      target='_blank'
+      class='flex items-center gap-2 hover:underline focus:underline'
+      ><Icon name='fa6-brands:x-twitter' class='w-6 h-6' />x.com/nunogois_dev</a
+    >
+    <a
+      href='https://dev.to/nunogois'
+      target='_blank'
+      class='flex items-center gap-2 hover:underline focus:underline'
+      ><Icon name='fa6-brands:dev' class='w-6 h-6' />dev.to/nunogois</a
+    >
+    <a
+      href='https://www.linkedin.com/in/nuno-gois'
+      target='_blank'
+      class='flex items-center gap-2 hover:underline focus:underline'
+      ><Icon
+        name='fa6-brands:linkedin'
+        class='w-6 h-6'
+      />linkedin.com/in/nuno-gois</a
+    >
+  </div>
+  <div
+    class='flex flex-col gap-4 text-sm text-center md:text-right md:justify-around md:gap-0'
+  >
+    <a href='/'><Nunogois small /></a>
+    <div class='flex flex-col gap-4 md:gap-0'>
+      <span>Thank you for checking out my website!</span>
+      <h2>© {new Date().getFullYear()} - Nuno Góis</h2>
+    </div>
+  </div>
+</footer>

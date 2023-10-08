@@ -1,0 +1,58 @@
+---
+import { Icon } from 'astro-icon/components'
+import type { Project, Skill } from '../types';
+
+interface Props {
+  projects: Project[]
+  skills: Skill[]
+}
+
+const { projects, skills } = Astro.props
+---
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
+	{projects.map(({ html_url, name, language, pushed_at, description, stargazers_count, forks }) => {
+    const skill = skills.find((s) => s.name === language)
+
+    return (
+      <div class="group border border-light-gray rounded-xl flex flex-col overflow-hidden bg-gradient-to-tr from-blue-800 via-green-800 to-yellow-800 shadow-button">
+        <a href={html_url} target="_blank" class="flex flex-col flex-grow w-full h-full justify-center rounded-xl bg-background shadow-button transition duration-300 hover:bg-opacity-70 focus:bg-opacity-70">
+          <h5
+            class="flex justify-center items-center text-lg font-medium mb-2 p-2 underline"
+          >
+            {name}
+          </h5>
+          <div class="flex justify-between mx-5 mb-2 text-neutral-300 transition-all duration-300 group-hover:text-white group-focus-within:text-white">
+            <div class="flex items-center">
+              {skill && (
+                <img
+                  src={skill.image}
+                  alt={language}
+                  class="inline-block mr-1 object-cover w-5 h-5 object-[-2px]"
+                  title={language}
+                />
+                <h6 class="text-xs">
+                  {language}
+                </h6>
+              )}
+            </div>
+            <span class="text-xs">{pushed_at.split('T')[0]}</span>
+          </div>
+          <div class="text-xs mb-3 mx-5 text-left text-neutral-400 transition-all duration-300 group-hover:text-white group-focus-within:text-white">
+            {description ?? ''}
+          </div>
+          <div class="flex-1 grid grid-cols-2 text-sm content-end">
+            <div class="flex justify-center items-center border-t border-neutral-500 border-r p-1">
+              <Icon name="fa6-solid:star" class="inline-block mr-1 w-4" />
+              {stargazers_count}
+            </div>
+            <div class="flex justify-center items-center border-t border-neutral-500 p-1">
+              <Icon name="fa6-solid:code-fork" class="inline-block mr-1 w-4" />
+              {forks}
+            </div>
+          </div>
+        </a>
+      </div>
+	  )
+  })}
+</div>

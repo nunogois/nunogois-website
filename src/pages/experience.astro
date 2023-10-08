@@ -1,0 +1,143 @@
+---
+import { Image } from 'astro:assets'
+import { Icon } from 'astro-icon/components'
+import Layout from '../layouts/Layout.astro'
+import Section from '../components/Section.astro'
+import GitHubProjects from '../components/GitHubProjects.astro'
+import projectsImg from '../assets/photos/experience.jpg'
+import skillsImg from '../assets/skills.png'
+import cvImg from '../assets/cv.png'
+import { DATE } from '../constants/dates'
+import { EXPERIENCE, INTERESTING_PROJECTS } from '../constants/projects'
+import { years } from '../utils/years'
+import { fetchSkills } from '../api/skills'
+import { fetchProjects } from '../api/projects'
+import ScrollFadeIn from '../components/ScrollFadeIn.astro'
+import LinkBox from '../components/LinkBox.astro'
+
+const skills = await fetchSkills()
+const { popular, recent } = await fetchProjects()
+---
+
+<Layout title='Experience'>
+  <Section title='experience'>
+    <ScrollFadeIn stayShown>
+      <div
+        class='my-10 flex flex-col lg:flex-row gap-10 rounded-xl justify-center items-center'
+      >
+        <Image
+          class='flex-shrink-0 w-32 h-32 mx-auto rounded-full md:w-52 md:h-52 object-cover object-center'
+          src={projectsImg}
+          alt='experience'
+        />
+        <div class='items-center'>
+          <p class='text-left font-bold'>
+            With over {years(DATE.PROFESSIONAL)} years of professional experience,
+            I was extremely fortunate to have had the opportunity to work on
+            exciting projects with very talented people.
+          </p>
+          <p class='text-left mt-5'>
+            I'm very proud of all that I have accomplished so far. It brings me
+            joy to know that I have had a real impact, not only on the end result
+            but also on the people I have collaborated with and end-users. Whether
+            developing small or large projects, improving the experience of my
+            colleagues and end-users, or solving complex problems, I always strive
+            to give my best and have fun doing it.
+            <br />
+            In addition to my professional work, I constantly challenge myself
+            with personal projects to continue learning and growing my skills.
+            <br /><br />I can't wait to see what comes next!
+          </p>
+        </div>
+      </div>
+      <div class='flex mt-5'>
+        <Icon name='fa6-solid:briefcase' class='inline-block h-7 w-7' />
+        <h3 class='text-left text-xl ml-2'>Work Experience</h3>
+      </div>
+      {
+        EXPERIENCE.map(({ name, image, url, role, date, description }) => (
+          <div class='lg:flex overflow-hidden mt-5'>
+            <Image class='w-16 h-16 mt-6' src={image} alt={name} />
+            <div class='flex flex-col pt-5 lg:p-5 items-start'>
+              <a href={url} target="_blank">
+                <h4 class='text-left font-bold underline underline-offset-4'>{name}</h4>
+              </a>
+              <p class='text-left my-1 text-sm'>{role}</p>
+              <p class='text-left text-xs text-neutral-300'>{date}</p>
+              {description && (
+                <ul class='text-left mt-5 list-disc text-neutral-400'>
+                  {description.split('\n').map(item => (
+                    <li class='text-left text-sm mt-1'>{item}</li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          </div>
+        ))
+      }
+      <div class='flex mt-5 items-center'>
+        <Icon name='fa6-solid:lightbulb' class='inline-block h-7 w-7' />
+        <h3 class='text-left text-xl ml-2'>Interesting Projects</h3>
+      </div>
+      <p class='text-left my-5'>
+        Over the years, I have been approached with a variety of unique challenges
+        and ideas, as well as coming up with my own. Through these experiences, I
+        have had the opportunity to work on some truly interesting projects, even
+        with limited resources such as time. These experiences have helped shape
+        me into the versatile and creative developer I am today.
+      </p>
+      {
+        INTERESTING_PROJECTS.map(({ name, description }) => (
+          <details>
+            <summary class='text-left text-sm font-bold mt-4 cursor-pointer underline'>
+              {name}
+            </summary>
+            <p class='text-sm text-left ml-1 pl-3 mt-1 mb-2 text-neutral-400'>
+              {description}
+            </p>
+          </details>
+        ))
+      }
+      {
+        (popular.length > 0 || recent.length > 0) && (
+          <div class='flex my-5 items-center'>
+            <Icon name='fa6-brands:github' class='inline-block h-7 w-7' />
+            <h3 class='text-left text-xl ml-2'>GitHub Projects</h3>
+          </div>
+        )
+      }
+      {
+        popular.length > 0 && (
+          <>
+            <div class='flex mb-5 justify-center items-center'>
+              <Icon name='fa6-solid:star' class='inline-block w-5 h-5' />
+              <h4 class='text-lg ml-2'>Popular</h4>
+            </div>
+            <GitHubProjects projects={popular} {skills} />
+          </>
+        )
+      }
+      {
+        recent.length > 0 && (
+          <>
+            <div class='flex mt-10 mb-5 justify-center items-center'>
+              <Icon name='fa6-solid:newspaper' class='inline-block w-5 h-5' />
+              <h4 class='text-lg ml-2'>Recent Updates</h4>
+            </div>
+            <GitHubProjects projects={recent} {skills} />
+          </>
+        )
+      }
+    </ScrollFadeIn>
+  </Section>
+  <section class="flex my-40 justify-center items-center">
+    <ScrollFadeIn class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-10 max-w-5xl mx-6">
+      <LinkBox href="/skills" title="SKILLS" description="I've had my hands on numerous tech stacks and am always on the lookout for the next thing to learn. Explore my skill set.">
+        <Image src={skillsImg} class="w-20 h-20 md:w-44 md:h-44" alt="Skills" />
+      </LinkBox>
+      <LinkBox href="/cv" title="CV" extraClass="delay-100" description="A comprehensive look at my professional journey and experience so far. Optionally download it as PDF if you prefer.">
+        <Image src={cvImg} class="w-20 h-20 md:w-44 md:h-44" alt="CV" />
+      </LinkBox>
+    </ScrollFadeIn>
+  </section>
+</Layout>
