@@ -2,7 +2,7 @@
 import Section from "./Section.astro";
 import { fetchEvents } from "../api/events";
 import { Icon } from "astro-icon/components";
-import { isWatchEvent, isPullRequestEvent, isPushEvent, isPullRequestReviewEvent, EventReviewState } from "../types";
+import { isWatchEvent, isPullRequestEvent, isPushEvent, isPullRequestReviewEvent, EventReviewState, EventAction } from "../types";
 import ScrollFadeIn from "./ScrollFadeIn.astro";
 
 const events = await fetchEvents()
@@ -27,13 +27,13 @@ const events = await fetchEvents()
           } : isPullRequestEvent(event) ? {
             href: event.payload.pull_request.html_url,
             icon: event.payload.pull_request.merged ? 'fa6-solid:code-merge' : 'fa6-solid:code-pull-request',
-            color: event.payload.pull_request.merged ? 'text-purple-500' : 'text-green-500',
+            color: event.payload.pull_request.merged ? 'text-purple-500' : event.payload.action === EventAction.Closed ? 'text-red-500' : 'text-green-500',
             title: `${event.payload.pull_request.title} (#${event.payload.pull_request.number})`
           } : isPushEvent(event) ? {
-            href: `https://github.com/${event.repo.name}/commit/${event.payload.commits[0].sha}`,
+            href: `https://github.com/${event.repo.name}/commit/${event.payload.commits[event.payload.commits.length - 1].sha}`,
             icon: 'fa6-solid:code-merge',
             color: 'text-purple-500',
-            title: event.payload.commits[0].message.split('\n')[0]
+            title: event.payload.commits[event.payload.commits.length - 1].message.split('\n')[0]
           } : isPullRequestReviewEvent(event) ? {
             href: event.payload.pull_request.html_url,
             icon: event.payload.review.state === EventReviewState.Approved ? 'fa6-solid:check' : event.payload.review.state === EventReviewState.ChangesRequested ? 'fa6-solid:xmark' : 'fa6-solid:comment',

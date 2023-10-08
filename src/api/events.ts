@@ -26,17 +26,16 @@ export const fetchEvents = async (): Promise<Event[]> => {
       } else if (
         isPullRequestEvent(event) &&
         (event.payload.action === EventAction.Opened ||
-          (event.payload.action === EventAction.Closed &&
-            event.payload.pull_request.merged))
+          event.payload.action === EventAction.Closed)
       ) {
         const key = `${event.repo.name}-${event.payload.pull_request.number}`
         if (!eventMap.has(key)) eventMap.set(key, event)
       } else if (isPushEvent(event) && event.payload.ref === MAIN) {
-        const key = `${event.repo.name}-${
+        const commitMessage =
           event.payload.commits[event.payload.commits.length - 1].message
-            .split(')\n')[0]
-            .split('#')[1]
-        }`
+        const key = commitMessage.includes('(#')
+          ? `${event.repo.name}-${commitMessage.split(')\n')[0].split('#')[1]}`
+          : `${event.repo.name}-${commitMessage.split('\n')[0]}`
         if (!eventMap.has(key)) eventMap.set(key, event)
       } else if (
         isPullRequestReviewEvent(event) &&

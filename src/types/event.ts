@@ -1,5 +1,6 @@
 export enum EventAction {
   Opened = 'opened',
+  Closed = 'closed',
   Started = 'started'
 }
 
