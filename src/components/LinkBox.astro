@@ -1,0 +1,23 @@
+---
+interface Props {
+  href: string
+  title: string
+  extraClass?: string
+  description: string
+}
+
+const { href, title, extraClass, description } = Astro.props
+---
+
+<div class={`flex group w-full md:w-[240px] lg:w-[314px] rounded bg-gradient-to-tr from-blue-800 via-green-800 to-yellow-800 shadow-button hover:animate-textHue focus:animate-textHue ${extraClass || ''}`}>
+  <a href={href} class="flex flex-grow w-full h-full justify-center rounded bg-neutral-800 shadow-button transition duration-300 hover:bg-opacity-70 focus:bg-opacity-70">
+    <div class="flex flex-col p-4 rounded justify-center items-center">
+      <div class="flex md:flex-col items-center">
+      <slot />
+      <div class="flex flex-col gap-2 md:gap-4">
+        <h3 class="underline underline-offset-4 md:text-center">{title}</h3>
+        <p class="text-xs sm:text-sm text-justify text-neutral-400 group-hover:text-white group-focus-within:text-white transition duration-300">{description}</p>
+      </div>
+    </div>
+  </a>
+</div>

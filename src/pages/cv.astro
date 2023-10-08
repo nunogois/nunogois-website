@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets'
 import { Icon } from 'astro-icon/components'
 import Layout from '../layouts/Layout.astro'
-import aboutImg from '../assets/about.jpg'
+import aboutImg from '../assets/photos/about.jpg'
 import ccpImg from '../assets/aws-ccp.png'
 import { DATE } from '../constants/dates'
 import { EXPERIENCE } from '../constants/projects'
@@ -28,14 +28,14 @@ const signature = `Thank you for your time.
         <div class='flex flex-row justify-between'>
           <div>
             <h1 class='text-xl'>Nuno Góis</h1>
-            <h2 class='text-sm'>Full-Stack Developer</h2>
+            <h2 class='text-sm'>Full Stack Developer</h2>
           </div>
           <div class='flex flex-col gap-1 justify-center items-end'>
-            <a href='https://www.nunogois.com' target='_blank' class='text-xs'
+            <a href='https://www.nunogois.com' target='_blank' class='text-xs hover:underline focus:underline'
               ><Icon name='fa6-solid:globe' class='inline-block w-3 h-3' />
                www.nunogois.com</a
             >
-            <a href='mailto:me@nunogois.com' target='_blank' class='text-xs'
+            <a href='mailto:me@nunogois.com' target='_blank' class='text-xs hover:underline focus:underline'
               ><Icon name='fa6-solid:at' class='inline-block w-3 h-3' />
                me@nunogois.com</a
             >
@@ -65,7 +65,7 @@ const signature = `Thank you for your time.
       <a
         href='https://www.credly.com/badges/d69215a7-cf01-4f20-b959-4feef5bed505/public_url'
         target='_blank'
-        class='flex items-center gap-2 font-bold text-xs'
+        class='flex items-center gap-2 font-bold text-xs hover:underline focus:underline'
         ><Image
           src={ccpImg}
           alt='AWS Certified Cloud Practitioner'
@@ -96,8 +96,8 @@ const signature = `Thank you for your time.
       ))
     }
 
-    <div class='underline text-xs text-center mt-10 print:hidden'>
-      <a href='/Nuno Góis - Full-Stack Developer.pdf' target='_blank'
+    <div class='underline text-xs text-center mt-10 mb-2 print:hidden'>
+      <a href='/Nuno Góis - Full Stack Developer - CV.pdf' data-astro-reload
         >Download PDF</a
       >
     </div>

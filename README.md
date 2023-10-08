@@ -12,8 +12,6 @@ Hosted in [Cloudflare Pages](https://pages.cloudflare.com/).
 
 ## TODO
 
-- [ ] home page
-- [ ] slight redesign (too boxy?)
 - [ ] thumbnail
 - [ ] og tags
 - [ ] sitemap

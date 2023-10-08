@@ -1,7 +1,5 @@
 import type { Project, Projects } from '../types'
 
-const IGNORED_REPOS = ['nunogois', 'nunogois-cv']
-
 export const fetchProjects = async (): Promise<Projects> => {
   try {
     const res = await fetch(
@@ -10,16 +8,11 @@ export const fetchProjects = async (): Promise<Projects> => {
 
     const projects: Project[] = await res.json()
 
-    const filteredProjects = projects?.filter(
-      p =>
-        !p.fork && !IGNORED_REPOS.includes(p.name) && !p.name.includes('-old')
-    )
-
     return {
-      popular: filteredProjects
+      popular: projects
         .sort((a, b) => b.stargazers_count - a.stargazers_count)
         .slice(0, 6),
-      recent: filteredProjects
+      recent: projects
         .sort((a, b) => +new Date(b.pushed_at) - +new Date(a.pushed_at))
         .slice(0, 6)
     }

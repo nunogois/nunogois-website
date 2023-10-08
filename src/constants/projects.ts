@@ -7,7 +7,7 @@ export const EXPERIENCE = [
     name: 'Unleash',
     image: unleashImg,
     url: 'https://www.getunleash.io/',
-    role: 'Full-Stack Developer (Senior)',
+    role: 'Full Stack Developer (Senior)',
     date: '04/2022 - Current',
     description: `Contributed to Unleash, an open-source feature flag management solution with over 18M docker pulls, 7K stars on GitHub and a worldwide user base consisting of every kind of end-user, from individual developers to large enterprise companies.
 Integrated with Stripe for billing, involving multiple projects and third party integrations, enabling end-users to sign up and manage their paid plans through their Unleash instance.
@@ -26,7 +26,7 @@ Shared knowledge and learned with teammates through pair and mob programming.`
     name: 'Zoi',
     image: zoiImg,
     url: 'https://en.zoi.tech/',
-    role: 'Full-Stack Developer (Specialist)',
+    role: 'Full Stack Developer (Specialist)',
     date: '06/2021 - 03/2022',
     description: `Assigned to Digital Innovations, worked close to partners as a developer in exploratory projects using innovative cloud solutions.
 Developed a chatbot based on Google Cloud/Firebase, UI built with Quasar Framework (Vue.js) and a Google Cloud Function that acted as a bridge between the UI, Dialogflow CX (conversation flow, NLP), Contentful;
@@ -40,7 +40,7 @@ Shared knowledge and learned with teammates through pair programming.`
     name: 'IQA - Sistemas de Gestão, Lda',
     image: iqaImg,
     url: 'https://www.myagir.com/en/',
-    role: 'Full-Stack Developer (Lead, Architect)',
+    role: 'Full Stack Developer (Lead, Architect)',
     date: '03/2011 - 05/2021',
     description: `Developed AGIR ®, a Quality Management Software (QMS), Process Management (BPM) and Document control software. Worked on the platform since 2011: From ASP.NET, SQL Server, Web API, .NET WinForms or Java to Windows Services and Office Add-Ins, (...).
 Created specific features that give this platform a unique edge in flexibility - features like an intuitive drag & drop Form Designer, a custom JavaScript framework (based on jQuery, later Vue) and a business logic assistant (workflow, form logic) mean that it is able to adapt to every customer need, providing infinite possibilities.

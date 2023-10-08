@@ -12,6 +12,9 @@ module.exports = {
         fadeInUp: 'fadeInUp 2s ease-in-out',
         textHue: 'hue 10s infinite linear'
       },
+      boxShadow: {
+        button: 'inset 0 0 0 1px rgba(255, 255, 255, 0.2)'
+      },
       keyframes: {
         fadeInDown: {
           from: { opacity: 0.1, transform: 'translateY(-80px)' },

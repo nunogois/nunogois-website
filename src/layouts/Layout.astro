@@ -11,7 +11,7 @@ interface Props {
 }
 
 const { title, home } = Astro.props
-const mainClass = home ? '' : 'pt-20'
+const mainClass = home ? '' : 'pt-20 print:pt-0'
 const layoutTitle = title ? `${WEBSITE_TITLE} - ${title}` : WEBSITE_TITLE
 ---
 

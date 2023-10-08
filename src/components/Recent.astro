@@ -1,0 +1,62 @@
+---
+import Section from "./Section.astro";
+import { fetchEvents } from "../api/events";
+import { Icon } from "astro-icon/components";
+import { isWatchEvent, isPullRequestEvent, isPushEvent, isPullRequestReviewEvent, EventReviewState } from "../types";
+import ScrollFadeIn from "./ScrollFadeIn.astro";
+
+const events = await fetchEvents()
+---
+
+{events.length > 0 && (
+  <Section title="recent">
+    <p class='pt-5 text-left'>
+      A lot of my work is public on open-source GitHub repositories.
+    </p>
+    <p class="text-left">
+      You can check some of my recent activity below, updated daily.
+    </p>
+    <ul class="flex flex-col my-5">
+      <ScrollFadeIn>
+        {events.map(event => {
+          const { href, icon, color, title } = isWatchEvent(event) ? {
+            href: `https://github.com/${event.repo.name}`,
+            icon: 'fa6-solid:star',
+            color: 'text-yellow-500',
+            title: `Starred ${event.repo.name}`
+          } : isPullRequestEvent(event) ? {
+            href: event.payload.pull_request.html_url,
+            icon: 'fa6-solid:code-pull-request',
+            color: 'text-green-500',
+            title: `${event.payload.pull_request.title} (#${event.payload.pull_request.number})`
+          } : isPushEvent(event) ? {
+            href: `https://github.com/${event.repo.name}/commit/${event.payload.commits[0].sha}`,
+            icon: 'fa6-solid:code-merge',
+            color: 'text-purple-500',
+            title: event.payload.commits[0].message.split('\n')[0]
+          } : isPullRequestReviewEvent(event) ? {
+            href: event.payload.pull_request.html_url,
+            icon: event.payload.review.state === EventReviewState.Approved ? 'fa6-solid:check' : event.payload.review.state === EventReviewState.ChangesRequested ? 'fa6-solid:xmark' : 'fa6-solid:comment',
+            color: event.payload.review.state === EventReviewState.Approved ? 'text-green-500' : event.payload.review.state === EventReviewState.ChangesRequested ? 'text-red-500' : 'text-neutral-200',
+            title: `${event.payload.pull_request.title} (#${event.payload.pull_request.number})`
+          } : {
+            href: 'https://github.com/nunogois',
+            icon: 'fa6-brands:github',
+            color: 'text-neutral-200',
+            title: 'Unknown activity'
+          }
+
+          return (
+            <li class="flex">
+              <a href={href} target="_blank" class="group p-1 flex items-center gap-2 whitespace-nowrap overflow-hidden">
+                <Icon name={icon} class={`w-2 h-2 md:w-4 md:h-4 ${color}`} />
+                <h4 class="text-xs overflow-hidden text-ellipsis md:text-sm group-hover:underline group-focus-within:underline">{title}</h4>
+                <span class="hidden md:block text-xs text-neutral-400">{event.repo.name}</span>
+              </a>
+            </li>
+          )
+        })}
+      </ScrollFadeIn>
+    </ul>
+  </Section>
+)}

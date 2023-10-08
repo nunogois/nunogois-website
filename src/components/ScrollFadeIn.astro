@@ -1,0 +1,48 @@
+---
+import type { Props as DefaultProps } from 'astro'
+
+interface Props extends DefaultProps {
+  stayShown?: boolean
+}
+
+const { stayShown } = Astro.props
+---
+
+<scroll-fade-in-container data-stayshown={stayShown?.toString()} {...Astro.props}>
+  <slot />
+</scroll-fade-in-container>
+
+<script>
+  class ScrollFadeInContainer extends HTMLElement {
+    constructor() {
+      super()
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('intersected')
+          } else if (!this.dataset.stayshown) {
+            entry.target.classList.remove('intersected')
+          }
+        })
+      })
+
+      Array.from(this.children).forEach(child => {
+        child.classList.add('scroll-fade-in');
+        observer.observe(child);
+      });
+    }
+  }
+
+  customElements.define('scroll-fade-in-container', ScrollFadeInContainer);
+</script>
+
+<style is:global>
+  .scroll-fade-in {
+    @apply opacity-0 blur-sm transition-all duration-1000 translate-y-full;
+  }
+
+  .scroll-fade-in.intersected {
+    @apply opacity-100 blur-none translate-y-0;
+  }
+</style>

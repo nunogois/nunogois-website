@@ -14,12 +14,6 @@ dependencies:
   astro-icon:
     specifier: 1.0.0-next.2
     version: 1.0.0-next.2
-  astro-integration-lottie:
-    specifier: ^0.2.3
-    version: 0.2.3(lottie-web@5.12.2)
-  lottie-web:
-    specifier: ^5.12.2
-    version: 5.12.2
   tailwindcss:
     specifier: ^3.0.24
     version: 3.3.3
@@ -1029,14 +1023,6 @@ packages:
       '@iconify/utils': 2.1.11
     transitivePeerDependencies:
       - supports-color
-    dev: false
-
-  /astro-integration-lottie@0.2.3(lottie-web@5.12.2):
-    resolution: {integrity: sha512-9foOU6B4nv9EAzFnsxAT6LxAu2Q14nntgKhLNrhDGj6Ob3SrdxNv6rTj9YFXTfv0p1UORwNYth2fMhO8+vRvpQ==}
-    peerDependencies:
-      lottie-web: ^5.10.0
-    dependencies:
-      lottie-web: 5.12.2
     dev: false
 
   /astro@3.0.5:
@@ -2243,10 +2229,6 @@ packages:
 
   /longest-streak@3.1.0:
     resolution: {integrity: sha512-9Ri+o0JYgehTaVBBDoMqIl8GXtbWg711O3srftcHhZ0dqnETqLaoIK0x17fUw9rFSlK/0NlsKe0Ahhyl5pXE2g==}
-    dev: false
-
-  /lottie-web@5.12.2:
-    resolution: {integrity: sha512-uvhvYPC8kGPjXT3MyKMrL3JitEAmDMp30lVkuq/590Mw9ok6pWcFCwXJveo0t5uqYw1UREQHofD+jVpdjBv8wg==}
     dev: false
 
   /lru-cache@5.1.1:
