@@ -3,12 +3,13 @@ import type { Props as DefaultProps } from 'astro'
 
 interface Props extends DefaultProps {
   stayShown?: boolean
+  list?: boolean
 }
 
-const { stayShown } = Astro.props
+const { stayShown, list } = Astro.props
 ---
 
-<scroll-fade-in-container data-stayshown={stayShown?.toString()} {...Astro.props}>
+<scroll-fade-in-container data-stayshown={stayShown?.toString()} data-list={list?.toString()} {...Astro.props}>
   <slot />
 </scroll-fade-in-container>
 
@@ -27,7 +28,9 @@ const { stayShown } = Astro.props
         })
       })
 
-      Array.from(this.children).forEach(child => {
+      const children = this.dataset.list ? this.children[0].children : this.children
+
+      Array.from(children).forEach(child => {
         child.classList.add('scroll-fade-in');
         observer.observe(child);
       });

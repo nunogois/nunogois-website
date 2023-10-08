@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/nunogois/nunogois-website/blob/main/static/thumbnail.png?raw=true" alt="Nuno Góis"/>
+  <img src="https://github.com/nunogois/nunogois-website/blob/main/public/thumbnail.png?raw=true" alt="Nuno Góis"/>
 </p>
 
 # nunogois-website
@@ -10,9 +10,6 @@ Built with [Astro 3.0](https://astro.build/).
 
 Hosted in [Cloudflare Pages](https://pages.cloudflare.com/).
 
-## TODO
-
-- [ ] thumbnail
-- [ ] og tags
-- [ ] sitemap
-- [ ] robots.txt
+<p align="center">
+  <img src="https://github.com/nunogois/nunogois-website/blob/main/lighthouse.png?raw=true" alt="Lighthouse scores"/>
+</p>
