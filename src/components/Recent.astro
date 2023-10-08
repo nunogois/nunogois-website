@@ -26,8 +26,8 @@ const events = await fetchEvents()
             title: `Starred ${event.repo.name}`
           } : isPullRequestEvent(event) ? {
             href: event.payload.pull_request.html_url,
-            icon: 'fa6-solid:code-pull-request',
-            color: 'text-green-500',
+            icon: event.payload.pull_request.merged ? 'fa6-solid:code-merge' : 'fa6-solid:code-pull-request',
+            color: event.payload.pull_request.merged ? 'text-purple-500' : 'text-green-500',
             title: `${event.payload.pull_request.title} (#${event.payload.pull_request.number})`
           } : isPushEvent(event) ? {
             href: `https://github.com/${event.repo.name}/commit/${event.payload.commits[0].sha}`,

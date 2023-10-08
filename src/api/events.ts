@@ -25,7 +25,9 @@ export const fetchEvents = async (): Promise<Event[]> => {
         if (!eventMap.has(key)) eventMap.set(key, event)
       } else if (
         isPullRequestEvent(event) &&
-        event.payload.action === EventAction.Opened
+        (event.payload.action === EventAction.Opened ||
+          (event.payload.action === EventAction.Closed &&
+            event.payload.pull_request.merged))
       ) {
         const key = `${event.repo.name}-${event.payload.pull_request.number}`
         if (!eventMap.has(key)) eventMap.set(key, event)
