@@ -6,6 +6,7 @@ export enum EventAction {
 
 enum EventType {
   WatchEvent = 'WatchEvent',
+  CreateEvent = 'CreateEvent',
   PullRequestEvent = 'PullRequestEvent',
   PullRequestReviewEvent = 'PullRequestReviewEvent',
   PushEvent = 'PushEvent'
@@ -41,6 +42,10 @@ interface EventPayload {
   action: EventAction
 }
 
+interface CreateEventPayload {
+  ref_type: string
+}
+
 interface PullRequestEventPayload extends EventPayload {
   pull_request: EventPullRequest
 }
@@ -68,6 +73,10 @@ interface WatchEvent extends Event {
   payload: EventPayload
 }
 
+interface CreateEvent extends Event {
+  payload: CreateEventPayload
+}
+
 interface PullRequestEvent extends Event {
   payload: PullRequestEventPayload
 }
@@ -82,6 +91,9 @@ interface PullRequestReviewEvent extends Event {
 
 export const isWatchEvent = (event: Event): event is WatchEvent =>
   event.type === EventType.WatchEvent
+
+export const isCreateEvent = (event: Event): event is CreateEvent =>
+  event.type === EventType.CreateEvent
 
 export const isPullRequestEvent = (event: Event): event is PullRequestEvent =>
   event.type === EventType.PullRequestEvent

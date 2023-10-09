@@ -3,6 +3,7 @@ import {
   EventAction,
   isPullRequestEvent,
   isWatchEvent,
+  isCreateEvent,
   isPushEvent,
   isPullRequestReviewEvent
 } from '../types'
@@ -21,6 +22,12 @@ export const fetchEvents = async (): Promise<Event[]> => {
 
     events.forEach(event => {
       if (isWatchEvent(event) && event.payload.action === EventAction.Started) {
+        const key = `${event.type}-${event.repo.name}`
+        if (!eventMap.has(key)) eventMap.set(key, event)
+      } else if (
+        isCreateEvent(event) &&
+        event.payload.ref_type === 'repository'
+      ) {
         const key = `${event.type}-${event.repo.name}`
         if (!eventMap.has(key)) eventMap.set(key, event)
       } else if (
