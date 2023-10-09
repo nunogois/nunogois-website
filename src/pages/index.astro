@@ -25,6 +25,17 @@ import Recent from '../components/Recent.astro';
       </h2>
     </div>
   </section>
+  <section class="flex justify-center mx-auto items-center w-full px-10 md:px-24 my-40 max-w-screen-xl">
+    <ScrollFadeIn class="flex flex-col md:flex-row justify-center items-center gap-10">
+        <Image src={unleashImg} alt="Unleash" class="w-20 h-20" />
+        <div class="flex flex-col text-left">
+          <p>I currently work as a Senior Full Stack Developer at <a href="https://www.getunleash.io/" target="_blank" class="underline">Unleash</a>.</p>
+          <p>Unleash is a <a href="https://docs.getunleash.io/topics/feature-flags/feature-flag-best-practices" target="_blank" class="underline">feature flag</a> management solution built with large enterprises in mind.</p>
+          <p>It is <a href="https://github.com/unleash/unleash" target="_blank" class="underline">open source</a>, private, secure, scalable, and trusted by developers all over the world.</p>
+        </div>
+    </ScrollFadeIn>
+  </section>
+  <Recent />
   <section class="flex mt-20 mb-40 justify-center items-center">
     <ScrollFadeIn class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-10 max-w-5xl mx-6">
       <LinkBox href="/about" title="ABOUT" description="Get to know my journey, my love for coding, and the things that keep me going. Learn more about the person behind the code.">
@@ -38,15 +49,4 @@ import Recent from '../components/Recent.astro';
       </LinkBox>
     </ScrollFadeIn>
   </section>
-  <section class="flex justify-center mx-auto items-center w-full px-10 md:px-24 my-20 max-w-screen-xl">
-    <ScrollFadeIn class="flex flex-col md:flex-row justify-center items-center gap-10">
-        <Image src={unleashImg} alt="Unleash" class="w-20 h-20" />
-        <div class="flex flex-col text-left">
-          <p>I currently work as a Senior Full Stack Developer at <a href="https://www.getunleash.io/" target="_blank" class="underline">Unleash</a>.</p>
-          <p>Unleash is a <a href="https://docs.getunleash.io/topics/feature-flags/feature-flag-best-practices" target="_blank" class="underline">feature flag</a> management solution built with large enterprises in mind.</p>
-          <p>It is <a href="https://github.com/unleash/unleash" target="_blank" class="underline">open source</a>, private, secure, scalable, and trusted by developers all over the world.</p>
-        </div>
-    </ScrollFadeIn>
-  </section>
-  <Recent />
 </Layout>
