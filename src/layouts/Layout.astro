@@ -1,7 +1,12 @@
 ---
 import { ViewTransitions } from 'astro:transitions'
+import { Image } from 'astro:assets'
+import { Icon } from 'astro-icon/components'
 import Header from '../components/layout/Header.astro'
 import Footer from '../components/layout/Footer.astro'
+import AI from '../components/ai/AI.svelte'
+import aiImg from '../assets/ai.png'
+import aboutImg from '../assets/photos/about.jpg'
 
 const WEBSITE = {
   lang: 'en',
@@ -20,7 +25,6 @@ interface Props {
 const { title, home } = Astro.props
 const mainClass = home ? '' : 'pt-20 print:pt-0'
 const layoutTitle = title ? `${WEBSITE.title} - ${title}` : WEBSITE.title
-const canonicalURL = `${WEBSITE.url}${new URL(Astro.request.url).pathname}`;
 ---
 
 <!doctype html>
@@ -37,7 +41,6 @@ const canonicalURL = `${WEBSITE.url}${new URL(Astro.request.url).pathname}`;
       name="robots"
       content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
     />
-    <link rel="canonical" href={canonicalURL} />
     <meta
       property="og:type"
       prefix="http://ogp.me/ns# website: http://ogp.me/ns/website#"
@@ -67,6 +70,14 @@ const canonicalURL = `${WEBSITE.url}${new URL(Astro.request.url).pathname}`;
     <main class={mainClass}>
       <slot />
     </main>
+    <AI client:load>
+      <Icon name="fa6-solid:xmark" slot="close-icon"/>
+      <Icon name="fa6-solid:circle-arrow-right" class="w-6 h-6" slot="send-icon" />
+      <Image src={aiImg} class="w-16 h-16" alt="AI" slot="image" />
+      <Image src={aiImg} class="w-12 h-12" alt="AI" slot="image-small" />
+      <Image src={aboutImg} class="w-8 h-8 rounded-full" alt="Nuno" slot="ai-icon" />
+      <Icon name="fa6-solid:user" class="p-1 w-8 h-8 rounded-full bg-neutral-900" slot="user-icon" />
+    </AI>
     <Footer />
   </body>
 </html>
