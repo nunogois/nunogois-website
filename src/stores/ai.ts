@@ -6,12 +6,44 @@ interface Message {
   message: string
 }
 
+export const LANGUAGE_GREETINGS: Record<string, string> = {
+  en: 'Hi! My name is Nuno, how may I help?',
+  'zh-CN': '你好！我叫Nuno，有什么可以帮助您的？',
+  hi: 'नमस्ते! मेरा नाम नुनो है, कैसे मदद कर सकता हूँ?',
+  es: '¡Hola! Mi nombre es Nuno, ¿en qué puedo ayudarte?',
+  fr: "Salut! Je m'appelle Nuno, comment puis-je vous aider?",
+  bn: 'হাই! আমার নাম নুনো, আমি কীভাবে সাহায্য করতে পারি?',
+  ru: 'Привет! Меня зовут Нуно, как я могу вам помочь?',
+  pt: 'Olá! O meu nome é Nuno, em que posso ajudar?',
+  de: 'Hallo! Mein Name ist Nuno, wie kann ich Ihnen helfen?',
+  ja: 'こんにちは！私の名前はNunoです、どのようにお手伝いできますか？',
+  sw: 'Habari! Jina langu ni Nuno, je naweza kusaidiaje?',
+  mr: 'हाय! माझं नाव नुनो आहे, माझ्या कडून तुमच्या साठी काही केल्या जाऊ शकतं?',
+  te: 'హలో! నా పేరు నునో, నాకు ఎలా సహాయపడగలను?',
+  tr: 'Merhaba! Benim adım Nuno, size nasıl yardımcı olabilirim?',
+  ta: 'ஹலோ! என் பெயர் நுனோ, எப்படி உதவ முடியும்?',
+  ko: '안녕하세요! 제 이름은 누노입니다, 어떻게 도와드릴까요?',
+  it: 'Ciao! Il mio nome è Nuno, come posso aiutarti?',
+  nl: 'Hallo! Mijn naam is Nuno, hoe kan ik je helpen?',
+  pa: 'ਹੈਲੋ! ਮੇਰਾ ਨਾਮ ਨੁਨੋ ਹੈ, ਮੈਂ ਤੁਹਾਨੂੰ ਕਿਵੇਂ ਮਦਦ ਕਰ ਸਕਦਾ ਹਾਂ?',
+  jv: 'Halo! Jenenge aku Nuno, piye carane aku bisa mbantu sampeyan?',
+  ms: 'Hai! Nama saya Nuno, bagaimana saya boleh membantu anda?',
+  id: 'Halo! Nama saya Nuno, bagaimana saya bisa membantu Anda?',
+  vi: 'Xin chào! Tên tôi là Nuno, tôi có thể giúp gì cho bạn?',
+  tl: 'Hello! Ako si Nuno, paano kita matutulungan?',
+  th: 'สวัสดี! ฉันชื่อ Nuno ฉันสามารถช่วยคุณได้อย่างไร?',
+  gu: 'હાય! મારું નામ નુનો છે, હું તમારી મદદ કેવી રીતે કરી શકું?',
+  kn: 'ಹಲೋ! ನನ್ನ ಹೆಸರು ನುನೋ, ನಾನು ಹೇಗೆ ಸಹಾಯ ಮಾಡಬಹುದು?',
+  ml: 'ഹലോ! എന്റെ പേര് നുനോ, എങ്ങനെ ഞാൻ സഹായിക്കാം?',
+  or: 'ହାଲୋ! ମୋ ନାମ ନୁନୋ, ମୁଁ କେମିତି ସହାଯ୍ୟ କରିପାରେ?',
+  uk: 'Привіт! Мене звати Нуно, як я можу вам допомогти?',
+  pl: 'Cześć! Mam na imię Nuno, w czym mogę pomóc?'
+}
+
 export const enabled = atom(false)
 export const open = atom(false)
 export const loaded = atom(false)
-export const chatHistory = atom<Message[]>([
-  { role: 'ai', message: `Hi! My name is Nuno, how may I help?` }
-])
+export const chatHistory = atom<Message[]>([])
 export const typing = atom(false)
 
 export const sendMessage = async (query: string) => {

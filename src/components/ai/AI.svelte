@@ -6,7 +6,8 @@
     enabled,
     chatHistory,
     typing,
-    sendMessage
+    sendMessage,
+    LANGUAGE_GREETINGS
   } from '../../stores/ai'
   import { fade, fly } from 'svelte/transition'
   import Message from './Message.svelte'
@@ -17,6 +18,20 @@
 
   onMount(async () => {
     await tick()
+    if (!$chatHistory.length) {
+      const greetingMessage = navigator
+        ? LANGUAGE_GREETINGS[navigator.language] ||
+          LANGUAGE_GREETINGS[navigator.language.split('-')[0]] ||
+          LANGUAGE_GREETINGS['en']
+        : LANGUAGE_GREETINGS['en']
+
+      chatHistory.set([
+        {
+          role: 'ai',
+          message: greetingMessage
+        }
+      ])
+    }
     loaded.set(true)
   })
 
