@@ -37,7 +37,28 @@ export const LANGUAGE_GREETINGS: Record<string, string> = {
   ml: 'ഹലോ! എന്റെ പേര് നുനോ, എങ്ങനെ ഞാൻ സഹായിക്കാം?',
   or: 'ହାଲୋ! ମୋ ନାମ ନୁନୋ, ମୁଁ କେମିତି ସହାଯ୍ୟ କରିପାରେ?',
   uk: 'Привіт! Мене звати Нуно, як я можу вам допомогти?',
-  pl: 'Cześć! Mam na imię Nuno, w czym mogę pomóc?'
+  pl: 'Cześć! Mam na imię Nuno, w czym mogę pomóc?',
+  no: 'Hei! Jeg heter Nuno, hvordan kan jeg hjelpe deg?',
+  sv: 'Hej! Jag heter Nuno, hur kan jag hjälpa dig?',
+  da: 'Hej! Jeg hedder Nuno, hvordan kan jeg hjælpe dig?',
+  fi: 'Hei! Nimeni on Nuno, miten voin auttaa sinua?',
+  el: 'Γειά! Ονομάζομαι Nuno, πώς μπορώ να σας βοηθήσω;',
+  cs: 'Ahoj! Jmenuji se Nuno, jak vám mohu pomoci?',
+  sk: 'Ahoj! Volám sa Nuno, ako vám môžem pomôcť?',
+  hu: 'Helló! Nuno vagyok, hogyan segíthetek?',
+  ro: 'Salut! Mă numesc Nuno, cum vă pot ajuta?',
+  bg: 'Здравейте! Казвам се Nuno, как мога да ви помогна?',
+  hr: 'Pozdrav! Ja sam Nuno, kako vam mogu pomoći?',
+  sr: 'Здраво! Ја сам Нуно, како могу да вам помогнем?',
+  sl: 'Pozdravljeni! Sem Nuno, kako vam lahko pomagam?',
+  lt: 'Sveiki! Aš vardu Nuno, kaip galiu jums padėti?',
+  lv: 'Sveiki! Mans vārds ir Nuno, kā es varu jums palīdzēt?',
+  et: 'Tere! Minu nimi on Nuno, kuidas ma saan teid aidata?',
+  ga: 'Dia dhuit! Is mise Nuno, conas is féidir liom cabhrú leat?',
+  mt: 'Bongu! Jisimni Nuno, kif nista’ ngħinek?',
+  cy: 'Helo! Fy enw i yw Nuno, sut gallaf i helpu?',
+  gd: 'Halò! Is mise Nuno, ciamar a tha mi gad chuideachadh?',
+  is: 'Halló! Ég heiti Nuno, hvernig get ég aðstoðað þig?'
 }
 
 export const enabled = atom(false)
